@@ -12,9 +12,14 @@ import {
   DrawerHeader,
   DrawerOverlay,
   useDisclosure,
+  Skeleton,
+  Stack,
+  SkeletonCircle,
+  SkeletonText,
 } from "@chakra-ui/react";
 import React, { FC } from "react";
 import { AiOutlineFire } from "react-icons/ai";
+import { BsClock } from "react-icons/bs";
 import CheckCircleIcon from "@chakra-ui/icon";
 interface PopularRecipesCardInterface {
   id: Number;
@@ -91,16 +96,34 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
             </Button>
           </DrawerHeader>
           <DrawerBody>
-            <VStack gap={2}>
-              <Text
-                mb={2}
-                fontSize={"large"}
-                fontWeight={"bold"}
-                fontFamily={"Noto Sans"}
-                color={"#0C2628"}
-              >
-                {props.title}
-              </Text>
+            <VStack gap={2} alignItems={"start"}>
+              <Box alignItems={"center"} w={"100%"} display={"flex"} justifyContent={"space-between"}>
+                <Box pr={3}>
+                  <Text
+                    fontSize={"large"}
+                    fontWeight={"bold"}
+                    fontFamily={"Noto Sans"}
+                    color={"#0C2628"}
+                  >
+                    {props.title}
+                  </Text>
+                </Box>
+                
+                  <Box
+                    fontSize={"small"}
+                    display={"flex"}
+                    alignItems={"center"}
+                    fontWeight={"normal"}
+                    color={"grey"}
+                  >
+                    <Box mr={1}>
+                      <BsClock fontSize={"small"} color={"grey"} />
+                    </Box>
+                    <Text fontFamily={"Rubik"}>
+                        15min
+                    </Text>
+                </Box>
+              </Box>
 
               <Wrap>
                 <WrapItem>
@@ -109,6 +132,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
                     display={"flex"}
                     alignItems={"center"}
                     fontSize={"sm"}
+                    fontFamily={"Rubik"}
                   >
                     <AiOutlineFire />{" "}
                     {`
@@ -117,6 +141,11 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
                   </Text>
                 </WrapItem>
               </Wrap>
+
+              <Box padding='6' boxShadow='lg' bg='white' w={"100%"}>
+  <SkeletonCircle size='10' />
+  <SkeletonText mt='4' noOfLines={1} spacing='4' />
+</Box>
             </VStack>
           </DrawerBody>
         </DrawerContent>
