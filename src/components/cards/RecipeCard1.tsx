@@ -14,8 +14,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { FC } from "react";
-import {AiOutlineFire} from 'react-icons/ai'
-import CheckCircleIcon from '@chakra-ui/icon'
+import { AiOutlineFire } from "react-icons/ai";
+import CheckCircleIcon from "@chakra-ui/icon";
 interface PopularRecipesCardInterface {
   id: Number;
   title: string;
@@ -52,16 +52,25 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
           fontWeight={"bold"}
           fontFamily={"Noto Sans"}
           color={"#0C2628"}
+          height={"53px"}
         >
-          {
-          props.title.length < 40 ? props.title : props.title.slice(0, 37) + '...'          }
+          {props.title.length < 40
+            ? props.title
+            : props.title.slice(0, 37) + "..."}
         </Text>
 
         <Wrap>
           <WrapItem>
-            <Text color={"grey"} display={"flex"} alignItems={"center"} fontSize={"sm"}>
-            <AiOutlineFire/> {`
-              ${props.calories}`} calories &bull; {`${props.carbs} carbs`}
+            <Text
+              color={"grey"}
+              display={"flex"}
+              alignItems={"center"}
+              fontSize={"sm"}
+            >
+              <AiOutlineFire />{" "}
+              {`
+              ${props.calories}`}{" "}
+              calories &bull; {`${props.carbs} carbs`}
             </Text>
           </WrapItem>
         </Wrap>
@@ -70,40 +79,45 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
       <Drawer placement={"bottom"} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent borderTopRadius={"2xl"}>
-          <DrawerHeader borderBottomWidth="1px" display={"flex"} justifyContent={"space-between"} alignItems={"center"}>Recipe Info
-          <Button colorScheme='teal' variant='ghost'>
-          <CheckCircleIcon w={3}/>
-          </Button>
+          <DrawerHeader
+            borderBottomWidth="1px"
+            display={"flex"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
+          >
+            Recipe Info
+            <Button colorScheme="teal" variant="ghost">
+              <CheckCircleIcon w={3} />
+            </Button>
           </DrawerHeader>
           <DrawerBody>
-          <VStack gap={2}>
-        {/* <Image
-          borderRadius={"2xl"}
-          objectFit={"cover"}
-          boxSize={"100%"}
-          src={props.imgURL}
-          shadow={"base"}
-        /> */}
-        <Text
-          mb={2}
-          fontSize={"large"}
-          fontWeight={"bold"}
-          fontFamily={"Noto Sans"}
-          color={"#0C2628"}
-        >
-          {
-          props.title.length < 40 ? props.title : props.title.slice(0, 37) + '...'          }
-        </Text>
+            <VStack gap={2}>
+              <Text
+                mb={2}
+                fontSize={"large"}
+                fontWeight={"bold"}
+                fontFamily={"Noto Sans"}
+                color={"#0C2628"}
+              >
+                {props.title}
+              </Text>
 
-        <Wrap>
-          <WrapItem>
-            <Text color={"grey"} display={"flex"} alignItems={"center"} fontSize={"sm"}>
-            <AiOutlineFire/> {`
-              ${props.calories}`} calories &bull; {`${props.carbs} carbs`}
-            </Text>
-          </WrapItem>
-        </Wrap>
-      </VStack>
+              <Wrap>
+                <WrapItem>
+                  <Text
+                    color={"grey"}
+                    display={"flex"}
+                    alignItems={"center"}
+                    fontSize={"sm"}
+                  >
+                    <AiOutlineFire />{" "}
+                    {`
+              ${props.calories}`}{" "}
+                    calories &bull; {`${props.carbs} carbs`}
+                  </Text>
+                </WrapItem>
+              </Wrap>
+            </VStack>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
