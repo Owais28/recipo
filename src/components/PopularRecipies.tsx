@@ -134,7 +134,7 @@ export const PopularRecipies = () => {
       <Box width="100%">
         <Flex
           py={2}
-          gap={3}
+          gap={4}
           css={{
             "&::-webkit-scrollbar": {
               width: "1px",

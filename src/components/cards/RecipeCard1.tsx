@@ -47,7 +47,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
       borderRadius={"2xl"}
     >
       <VStack gap={2}>
-        {/* <Skeleton> */}
+        <Skeleton borderRadius={"xl"} isLoaded={!loading}>
         <Image
           borderRadius={"2xl"}
           objectFit={"cover"}
@@ -55,7 +55,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
           src={props.imgURL}
           shadow={"base"}
           />
-          {/* </Skeleton> */}
+          </Skeleton>
         <SkeletonText mt="4" noOfLines={3} spacing="4" isLoaded={!loading} >
         <Text
           mb={2}
@@ -70,7 +70,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
             : props.title.slice(0, 37) + "..."}
         </Text>
             </SkeletonText>
-            <SkeletonText mt="4" noOfLines={3} spacing="4" isLoaded={!loading} >
+            <SkeletonText mt="4" noOfLines={1} spacing="4" isLoaded={!loading} >
         <Wrap>
           <WrapItem>
             <Text

@@ -19,23 +19,21 @@ import {
 import React, { useState } from "react";
 
 export const Featured = () => {
-  
-    const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
-    setTimeout(() => setLoading(false),3000)
+  setTimeout(() => setLoading(false), 3000);
 
   return (
-    <Box maxW="sm"  overflow="hidden">
+    <Box maxW="sm" overflow="hidden">
       <Text
         fontSize="lg"
         fontFamily={"Rubik"}
-        color="##0C2628"
+        color="#0C2628"
         fontWeight={"semibold"}
       >
         Featured
       </Text>
-      <Box width="100%" >
-
+      <Box width="100%">
         <Flex
           py={2}
           gap={3}
@@ -54,193 +52,234 @@ export const Featured = () => {
           }}
           overflowX={"scroll"}
           wrap={"nowrap"}
-          height={'230px'}
+          height={"230px"}
         >
-            <Skeleton isLoaded={!loading}>
-
-          <Box
-            overflow={"hidden"}
-            bgGradient={'linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))'}
-            p={4}
-            borderRadius={"2xl"}
-            color={"white"}
-            height={"200px"}
-            minW={"250px"}
-            w={"250px"}
-            display={"flex"} alignItems={"end"}
-            shadow={"lg"}
+          <Skeleton isLoaded={!loading} borderRadius={"xl"}>
+            <Box
+              overflow={"hidden"}
+              bgGradient={
+                "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
+              }
+              p={4}
+              borderRadius={"2xl"}
+              color={"white"}
+              height={"200px"}
+              minW={"250px"}
+              w={"250px"}
+              display={"flex"}
+              alignItems={"end"}
+              shadow={"lg"}
             >
-            <Box >
-              <Text
-                mb={2}
-                fontSize={"sm"}
-                lineHeight={"shorter"}
-                width={"80%"}
-                fontWeight={"bold"}
-                fontFamily={"Rubik"}
-              >
-                Asian white noodle with extra seafood
-              </Text>
-              <WrapItem alignItems={"center"}>
-                <Avatar
-                  size={"xs"}
-                  name="Dan Abrahmov"
-                  mr={2}
-                  src="https://bit.ly/dan-abramov"
-                />
-                <Text fontSize={"14px"} fontFamily={'Noto Sans'} color={"whiteAlpha.800"}>
-                  James Spader
+              <Box>
+                <Text
+                  mb={2}
+                  fontSize={"sm"}
+                  lineHeight={"shorter"}
+                  width={"80%"}
+                  fontWeight={"bold"}
+                  fontFamily={"Rubik"}
+                >
+                  Asian white noodle with extra seafood
                 </Text>
-              </WrapItem>
+                <WrapItem alignItems={"center"}>
+                  <Avatar
+                    size={"xs"}
+                    name="Dan Abrahmov"
+                    mr={2}
+                    src="https://bit.ly/dan-abramov"
+                  />
+                  <Text
+                    fontSize={"14px"}
+                    fontFamily={"Noto Sans"}
+                    color={"whiteAlpha.800"}
+                  >
+                    James Spader
+                  </Text>
+                </WrapItem>
+              </Box>
             </Box>
-          </Box>
           </Skeleton>
 
-          <Box
-            overflow={"hidden"}
-            bgGradient={'linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))'}
-            p={4}
-            borderRadius={"2xl"}
-            color={"white"}
-            height={"200px"}
-            minW={"250px"}
-            w={"250px"}
-            display={"flex"} alignItems={"end"}
-            shadow={"lg"}
-          >
-            <Box >
-              <Text
-                mb={2}
-                fontSize={"sm"}
-                lineHeight={"shorter"}
-                width={"80%"}
-                fontWeight={"bold"}
-                fontFamily={"Rubik"}
-                >
-                Asian white noodle with extra seafood
-              </Text>
-              <WrapItem alignItems={"center"}>
-                <Avatar
-                  size={"xs"}
-                  name="Dan Abrahmov"
-                  mr={2}
-                  src="https://bit.ly/dan-abramov"
-                />
-                <Text fontSize={"14px"} fontFamily={'Noto Sans'} color={"whiteAlpha.800"}>
-                  James Spader
-                </Text>
-              </WrapItem>
-            </Box>
-          </Box>
-          <Box
-            overflow={"hidden"}
-            bgGradient={'linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))'}
-            p={4}
-            borderRadius={"2xl"}
-            color={"white"}
-            height={"200px"}
-            minW={"250px"}
-            w={"250px"}
-            display={"flex"} alignItems={"end"}
-            shadow={"lg"}
-          >
-            <Box >
-              <Text
-                mb={2}
-                fontSize={"sm"}
-                lineHeight={"shorter"}
-                width={"80%"}
-                fontWeight={"bold"}
-                fontFamily={"Rubik"}
-              >
-                Asian white noodle with extra seafood
-              </Text>
-              <WrapItem alignItems={"center"}>
-                <Avatar
-                  size={"xs"}
-                  name="Dan Abrahmov"
-                  mr={2}
-                  src="https://bit.ly/dan-abramov"
-                  />
-                <Text fontSize={"14px"} fontFamily={'Noto Sans'} color={"whiteAlpha.800"}>
-                  James Spader
-                </Text>
-              </WrapItem>
-            </Box>
-          </Box>
-          <Box
-            overflow={"hidden"}
-            bgGradient={'linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))'}
-            p={4}
-            borderRadius={"2xl"}
-            color={"white"}
-            height={"200px"}
-            minW={"250px"}
-            w={"250px"}
-            display={"flex"} alignItems={"end"}
-            shadow={"lg"}
+          <Skeleton isLoaded={!loading} borderRadius={"xl"}>
+            <Box
+              overflow={"hidden"}
+              bgGradient={
+                "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
+              }
+              p={4}
+              borderRadius={"2xl"}
+              color={"white"}
+              height={"200px"}
+              minW={"250px"}
+              w={"250px"}
+              display={"flex"}
+              alignItems={"end"}
+              shadow={"lg"}
             >
-            <Box >
-              <Text
-                mb={2}
-                fontSize={"sm"}
-                lineHeight={"shorter"}
-                width={"80%"}
-                fontWeight={"bold"}
-                fontFamily={"Rubik"}
-              >
-                Asian white noodle with extra seafood
-              </Text>
-              <WrapItem alignItems={"center"}>
-                <Avatar
-                  size={"xs"}
-                  name="Dan Abrahmov"
-                  mr={2}
-                  src="https://bit.ly/dan-abramov"
-                />
-                <Text fontSize={"14px"} fontFamily={'Noto Sans'} color={"whiteAlpha.800"}>
-                  James Spader
+              <Box>
+                <Text
+                  mb={2}
+                  fontSize={"sm"}
+                  lineHeight={"shorter"}
+                  width={"80%"}
+                  fontWeight={"bold"}
+                  fontFamily={"Rubik"}
+                >
+                  Asian white noodle with extra seafood
                 </Text>
-              </WrapItem>
+                <WrapItem alignItems={"center"}>
+                  <Avatar
+                    size={"xs"}
+                    name="Dan Abrahmov"
+                    mr={2}
+                    src="https://bit.ly/dan-abramov"
+                  />
+                  <Text
+                    fontSize={"14px"}
+                    fontFamily={"Noto Sans"}
+                    color={"whiteAlpha.800"}
+                  >
+                    James Spader
+                  </Text>
+                </WrapItem>
+              </Box>
             </Box>
-          </Box>
-          <Box
-            overflow={"hidden"}
-            bgGradient={'linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))'}
-            p={4}
-            borderRadius={"2xl"}
-            color={"white"}
-            height={"200px"}
-            minW={"250px"}
-            w={"250px"}
-            display={"flex"} alignItems={"end"}
-            shadow={"lg"}
-          >
-            <Box >
-              <Text
-                mb={2}
-                fontSize={"sm"}
-                lineHeight={"shorter"}
-                width={"80%"}
-                fontWeight={"bold"}
-                fontFamily={"Rubik"}
-              >
-                Asian white noodle with extra seafood
-              </Text>
-              <WrapItem alignItems={"center"}>
-                <Avatar
-                  size={"xs"}
-                  name="Dan Abrahmov"
-                  mr={2}
-                  src="https://bit.ly/dan-abramov"
-                />
-                <Text fontSize={"14px"} fontFamily={'Noto Sans'} color={"whiteAlpha.800"}>
-                  James Spader
+          </Skeleton>
+          <Skeleton isLoaded={!loading} borderRadius={"xl"}>
+            <Box
+              overflow={"hidden"}
+              bgGradient={
+                "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
+              }
+              p={4}
+              borderRadius={"2xl"}
+              color={"white"}
+              height={"200px"}
+              minW={"250px"}
+              w={"250px"}
+              display={"flex"}
+              alignItems={"end"}
+              shadow={"lg"}
+            >
+              <Box>
+                <Text
+                  mb={2}
+                  fontSize={"sm"}
+                  lineHeight={"shorter"}
+                  width={"80%"}
+                  fontWeight={"bold"}
+                  fontFamily={"Rubik"}
+                >
+                  Asian white noodle with extra seafood
                 </Text>
-              </WrapItem>
+                <WrapItem alignItems={"center"}>
+                  <Avatar
+                    size={"xs"}
+                    name="Dan Abrahmov"
+                    mr={2}
+                    src="https://bit.ly/dan-abramov"
+                  />
+                  <Text
+                    fontSize={"14px"}
+                    fontFamily={"Noto Sans"}
+                    color={"whiteAlpha.800"}
+                  >
+                    James Spader
+                  </Text>
+                </WrapItem>
+              </Box>
             </Box>
-          </Box>
-
+          </Skeleton>
+          <Skeleton isLoaded={!loading} borderRadius={"xl"}>
+            <Box
+              overflow={"hidden"}
+              bgGradient={
+                "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
+              }
+              p={4}
+              borderRadius={"2xl"}
+              color={"white"}
+              height={"200px"}
+              minW={"250px"}
+              w={"250px"}
+              display={"flex"}
+              alignItems={"end"}
+              shadow={"lg"}
+            >
+              <Box>
+                <Text
+                  mb={2}
+                  fontSize={"sm"}
+                  lineHeight={"shorter"}
+                  width={"80%"}
+                  fontWeight={"bold"}
+                  fontFamily={"Rubik"}
+                >
+                  Asian white noodle with extra seafood
+                </Text>
+                <WrapItem alignItems={"center"}>
+                  <Avatar
+                    size={"xs"}
+                    name="Dan Abrahmov"
+                    mr={2}
+                    src="https://bit.ly/dan-abramov"
+                  />
+                  <Text
+                    fontSize={"14px"}
+                    fontFamily={"Noto Sans"}
+                    color={"whiteAlpha.800"}
+                  >
+                    James Spader
+                  </Text>
+                </WrapItem>
+              </Box>
+            </Box>
+          </Skeleton>
+          <Skeleton isLoaded={!loading} borderRadius={"xl"}>
+            <Box
+              overflow={"hidden"}
+              bgGradient={
+                "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
+              }
+              p={4}
+              borderRadius={"2xl"}
+              color={"white"}
+              height={"200px"}
+              minW={"250px"}
+              w={"250px"}
+              display={"flex"}
+              alignItems={"end"}
+              shadow={"lg"}
+            >
+              <Box>
+                <Text
+                  mb={2}
+                  fontSize={"sm"}
+                  lineHeight={"shorter"}
+                  width={"80%"}
+                  fontWeight={"bold"}
+                  fontFamily={"Rubik"}
+                >
+                  Asian white noodle with extra seafood
+                </Text>
+                <WrapItem alignItems={"center"}>
+                  <Avatar
+                    size={"xs"}
+                    name="Dan Abrahmov"
+                    mr={2}
+                    src="https://bit.ly/dan-abramov"
+                  />
+                  <Text
+                    fontSize={"14px"}
+                    fontFamily={"Noto Sans"}
+                    color={"whiteAlpha.800"}
+                  >
+                    James Spader
+                  </Text>
+                </WrapItem>
+              </Box>
+            </Box>
+          </Skeleton>
         </Flex>
       </Box>
     </Box>
