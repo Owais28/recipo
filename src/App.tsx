@@ -15,6 +15,7 @@ import {
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
 import { Featured } from "./components/Featured"
+import { PopularRecipies } from "./components/PopularRecipies"
 
 
 
@@ -23,6 +24,7 @@ export const App = () => (
     <Box width="100vw" bg="#ffffff" fontFamily={"Rubik"} p={3}>
         {/* <ColorModeSwitcher justifySelf="flex-end"  /> */}
         <Featured/>
+        <PopularRecipies/>
     </Box>
   </ChakraProvider>
 )

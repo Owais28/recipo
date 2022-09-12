@@ -18,22 +18,11 @@ import {
 import React from "react";
 
 export const Featured = () => {
-  const property = {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    beds: 3,
-    baths: 2,
-    title: "Modern home in city center in the heart of historic Los Angeles",
-    formattedPrice: "$1,900.00",
-    reviewCount: 34,
-    rating: 4,
-  };
-
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  
 
 
   return (
-    <Box maxW="sm" px={2} overflow="hidden">
+    <Box maxW="sm"  overflow="hidden">
       <Text
         fontSize="lg"
         fontFamily={"Rubik"}
@@ -61,6 +50,7 @@ export const Featured = () => {
           }}
           overflowX={"scroll"}
           wrap={"nowrap"}
+          height={'230px'}
         >
           <Box
             overflow={"hidden"}
@@ -69,8 +59,8 @@ export const Featured = () => {
             borderRadius={"2xl"}
             color={"white"}
             height={"200px"}
-            minW={"200px"}
-            w={"200px"}
+            minW={"250px"}
+            w={"250px"}
             display={"flex"} alignItems={"end"}
             shadow={"lg"}
           >
@@ -106,8 +96,8 @@ export const Featured = () => {
             borderRadius={"2xl"}
             color={"white"}
             height={"200px"}
-            minW={"200px"}
-            w={"200px"}
+            minW={"250px"}
+            w={"250px"}
             display={"flex"} alignItems={"end"}
             shadow={"lg"}
           >
@@ -142,8 +132,80 @@ export const Featured = () => {
             borderRadius={"2xl"}
             color={"white"}
             height={"200px"}
-            minW={"200px"}
-            w={"200px"}
+            minW={"250px"}
+            w={"250px"}
+            display={"flex"} alignItems={"end"}
+            shadow={"lg"}
+          >
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                fontWeight={"bold"}
+                fontFamily={"Rubik"}
+              >
+                Asian white noodle with extra seafood
+              </Text>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"14px"} fontFamily={'Noto Sans'} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
+          </Box>
+          <Box
+            overflow={"hidden"}
+            bgGradient={'linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))'}
+            p={4}
+            borderRadius={"2xl"}
+            color={"white"}
+            height={"200px"}
+            minW={"250px"}
+            w={"250px"}
+            display={"flex"} alignItems={"end"}
+            shadow={"lg"}
+          >
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                fontWeight={"bold"}
+                fontFamily={"Rubik"}
+              >
+                Asian white noodle with extra seafood
+              </Text>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"14px"} fontFamily={'Noto Sans'} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
+          </Box>
+          <Box
+            overflow={"hidden"}
+            bgGradient={'linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))'}
+            p={4}
+            borderRadius={"2xl"}
+            color={"white"}
+            height={"200px"}
+            minW={"250px"}
+            w={"250px"}
             display={"flex"} alignItems={"end"}
             shadow={"lg"}
           >
@@ -173,20 +235,6 @@ export const Featured = () => {
           </Box>
 
         </Flex>
-        <Button colorScheme='blue' onClick={onOpen}>
-        Open
-      </Button>
-      <Drawer placement={"bottom"} onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader borderBottomWidth='1px'>Basic Drawer</DrawerHeader>
-          <DrawerBody>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
       </Box>
     </Box>
   );
