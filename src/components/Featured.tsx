@@ -287,6 +287,6 @@ export const Featured = () => {
 };
 
 // colors
-// Text : #0F2732
+// Text : #0C2628
 // bg-grey : #F1F5F5
 // primary : #71B9BE

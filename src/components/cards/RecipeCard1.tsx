@@ -20,6 +20,7 @@ import {
 import React, { FC, useState } from "react";
 import { AiOutlineFire } from "react-icons/ai";
 import { BsClock } from "react-icons/bs";
+import {IoIosNutrition} from 'react-icons/io'
 import CheckCircleIcon from "@chakra-ui/icon";
 interface PopularRecipesCardInterface {
   id: Number;
@@ -45,8 +46,13 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
       minW={"60%"}
       boxShadow={"md"}
       borderRadius={"2xl"}
+      bg={"white"}
+      position={"relative"}
+    //   bgGradient={
+    //     "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
+    //   }
     >
-      <VStack gap={2}>
+      <VStack gap={2} justify={"start"} alignItems={"start"}>
         <Skeleton borderRadius={"xl"} isLoaded={!loading}>
         <Image
           borderRadius={"2xl"}
@@ -58,7 +64,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
           </Skeleton>
         <SkeletonText mt="4" noOfLines={3} spacing="4" isLoaded={!loading} >
         <Text
-          mb={2}
+        //   mb={2}
           fontSize={"sm"}
           fontWeight={"bold"}
           fontFamily={"Noto Sans"}
@@ -71,8 +77,8 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
         </Text>
             </SkeletonText>
             <SkeletonText mt="4" noOfLines={1} spacing="4" isLoaded={!loading} >
-        <Wrap>
-          <WrapItem>
+        <Box alignSelf={"start"} textAlign={"left"} alignItems={"center"}>
+          <Box>
             <Text
               color={"grey"}
               display={"flex"}
@@ -80,13 +86,24 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
               fontSize={"sm"}
               textAlign={"start"}
             >
-              <AiOutlineFire />{" "}
+              <Box color={'#71B9BE'} mr={1}>
+                    <AiOutlineFire />
+                    </Box>
               {`
-              ${props.calories}`}{" "}
-              calories &bull; {`${props.carbs} carbs`}
+              ${props.calories}`} {" "}
+              calories <Box>
+                
+                &bull; 
+                </Box>
+                {" "} <Box color={'#71B9BE'} ml={1}  mr={1}>
+                <IoIosNutrition/> 
+                </Box>
+                <Box>
+                {`${props.carbs} carbs`}
+                </Box>
             </Text>
-          </WrapItem>
-        </Wrap>
+          </Box>
+        </Box>
         </SkeletonText>
       </VStack>
 
@@ -146,11 +163,23 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
                     alignItems={"center"}
                     fontSize={"sm"}
                     fontFamily={"Rubik"}
+                    // color={'#71B9BE'}
                   >
-                    <AiOutlineFire />{" "}
-                    {`
-              ${props.calories}`}{" "}
-                    calories &bull; {`${props.carbs} carbs`}
+                    <Box color={'#71B9BE'} mr={1} transition={"all"}>
+                    <AiOutlineFire />
+                    </Box>
+              {`
+              ${props.calories}`} {" "}
+              calories <Box ml={1}>
+                
+                &bull; 
+                </Box>
+                {" "} <Box color={'#71B9BE'} ml={1}  mr={1}>
+                <IoIosNutrition/> 
+                </Box>
+                <Box>
+                {`${props.carbs} carbs`}
+                </Box>
                   </Text>
                 </WrapItem>
               </Wrap>

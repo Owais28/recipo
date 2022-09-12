@@ -19,12 +19,12 @@ export const Navbar = ({ person = "Stranger" }) => {
         <WrapItem flex={1}>
           <Grid gap={"0px"}>
 
-          <Text fontFamily={"Rubik"} fontSize={"larger"} fontWeight={"Bold"}>
+          <Text fontFamily={"Rubik"} fontSize={"larger"} color={'#0C2628'} fontWeight={"Bold"}>
             Hello {person} <Image display={"inline"} src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/waving-hand_1f44b.png" w={4} h={4}/>
           </Text>
           <Box>
             <Box mt={"-1"}>
-          <Text fontSize={"smaller"} fontWeight={"normal"}>It's dinner time!</Text>
+          <Text fontSize={"smaller"} color={'#0C2628'} fontWeight={"normal"}>It's dinner time!</Text>
             </Box>
           </Box>
           </Grid>
