@@ -7,6 +7,13 @@ import {
   Flex,
   WrapItem,
   Avatar,
+  Drawer,
+  Button,
+  DrawerOverlay,
+  useDisclosure,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -21,6 +28,10 @@ export const Featured = () => {
     reviewCount: 34,
     rating: 4,
   };
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+
   return (
     <Box maxW="sm" px={2} overflow="hidden">
       <Text
@@ -162,6 +173,20 @@ export const Featured = () => {
           </Box>
 
         </Flex>
+        <Button colorScheme='blue' onClick={onOpen}>
+        Open
+      </Button>
+      <Drawer placement={"bottom"} onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader borderBottomWidth='1px'>Basic Drawer</DrawerHeader>
+          <DrawerBody>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
       </Box>
     </Box>
   );
