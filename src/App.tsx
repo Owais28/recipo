@@ -20,7 +20,7 @@ import { Featured } from "./components/Featured"
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box fontSize="xl" width="100vw" bg="#ffffff" p={3}>
+    <Box width="100vw" bg="#ffffff" fontFamily={"Rubik"} p={3}>
         {/* <ColorModeSwitcher justifySelf="flex-end"  /> */}
         <Featured/>
     </Box>
