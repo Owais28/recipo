@@ -637,7 +637,7 @@ export const PopularRecipies = () => {
         justifyContent={"space-between"}
         fontSize="lg"
         fontFamily={"Rubik"}
-        color="#0F2732"
+        color="#0C2628"
         fontWeight={"semibold"}
       >
         Popular Recipies{" "}

@@ -26,7 +26,7 @@ export const Featured = () => {
       <Text
         fontSize="lg"
         fontFamily={"Rubik"}
-        color="#0F2732"
+        color="##0C2628"
         fontWeight={"semibold"}
       >
         Featured
