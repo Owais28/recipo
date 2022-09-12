@@ -14,12 +14,15 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerBody,
+  Skeleton,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 export const Featured = () => {
   
+    const [loading, setLoading] = useState(true)
 
+    setTimeout(() => setLoading(false),3000)
 
   return (
     <Box maxW="sm"  overflow="hidden">
@@ -32,6 +35,7 @@ export const Featured = () => {
         Featured
       </Text>
       <Box width="100%" >
+
         <Flex
           py={2}
           gap={3}
@@ -52,6 +56,8 @@ export const Featured = () => {
           wrap={"nowrap"}
           height={'230px'}
         >
+            <Skeleton isLoaded={!loading}>
+
           <Box
             overflow={"hidden"}
             bgGradient={'linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))'}
@@ -63,7 +69,7 @@ export const Featured = () => {
             w={"250px"}
             display={"flex"} alignItems={"end"}
             shadow={"lg"}
-          >
+            >
             <Box >
               <Text
                 mb={2}
@@ -88,6 +94,7 @@ export const Featured = () => {
               </WrapItem>
             </Box>
           </Box>
+          </Skeleton>
 
           <Box
             overflow={"hidden"}
@@ -109,7 +116,7 @@ export const Featured = () => {
                 width={"80%"}
                 fontWeight={"bold"}
                 fontFamily={"Rubik"}
-              >
+                >
                 Asian white noodle with extra seafood
               </Text>
               <WrapItem alignItems={"center"}>
@@ -154,7 +161,7 @@ export const Featured = () => {
                   name="Dan Abrahmov"
                   mr={2}
                   src="https://bit.ly/dan-abramov"
-                />
+                  />
                 <Text fontSize={"14px"} fontFamily={'Noto Sans'} color={"whiteAlpha.800"}>
                   James Spader
                 </Text>
@@ -172,7 +179,7 @@ export const Featured = () => {
             w={"250px"}
             display={"flex"} alignItems={"end"}
             shadow={"lg"}
-          >
+            >
             <Box >
               <Text
                 mb={2}

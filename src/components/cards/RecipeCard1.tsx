@@ -17,7 +17,7 @@ import {
   SkeletonCircle,
   SkeletonText,
 } from "@chakra-ui/react";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { AiOutlineFire } from "react-icons/ai";
 import { BsClock } from "react-icons/bs";
 import CheckCircleIcon from "@chakra-ui/icon";
@@ -32,6 +32,9 @@ interface PopularRecipesCardInterface {
 }
 export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [loading, setLoading] = useState(true)
+
+  setTimeout(() => setLoading(false),3000)
 
   return (
     <Box
@@ -44,13 +47,16 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
       borderRadius={"2xl"}
     >
       <VStack gap={2}>
+        {/* <Skeleton> */}
         <Image
           borderRadius={"2xl"}
           objectFit={"cover"}
           boxSize={"100%"}
           src={props.imgURL}
           shadow={"base"}
-        />
+          />
+          {/* </Skeleton> */}
+        <SkeletonText mt="4" noOfLines={3} spacing="4" isLoaded={!loading} >
         <Text
           mb={2}
           fontSize={"sm"}
@@ -63,7 +69,8 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
             ? props.title
             : props.title.slice(0, 37) + "..."}
         </Text>
-
+            </SkeletonText>
+            <SkeletonText mt="4" noOfLines={3} spacing="4" isLoaded={!loading} >
         <Wrap>
           <WrapItem>
             <Text
@@ -71,6 +78,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
               display={"flex"}
               alignItems={"center"}
               fontSize={"sm"}
+              textAlign={"start"}
             >
               <AiOutlineFire />{" "}
               {`
@@ -79,9 +87,10 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
             </Text>
           </WrapItem>
         </Wrap>
+        </SkeletonText>
       </VStack>
 
-      <Drawer size={'lg'} placement={"bottom"} onClose={onClose} isOpen={isOpen}>
+      <Drawer  placement={"bottom"} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent borderTopRadius={"2xl"}>
           <DrawerHeader
@@ -103,13 +112,14 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
                 display={"flex"}
                 justifyContent={"space-between"}
               >
-                <Box pr={3}>
+                <Box pr={3} py={"4"}>
+
                   <Text
                     fontSize={"large"}
                     fontWeight={"bold"}
                     fontFamily={"Noto Sans"}
                     color={"#0C2628"}
-                  >
+                    >
                     {props.title}
                   </Text>
                 </Box>
@@ -146,7 +156,9 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
               </Wrap>
 
               <Box padding="6" boxShadow="xl" bg="white" w={"100%"}>
-                <SkeletonCircle size="10" />
+                <SkeletonCircle size="10" isLoaded={true} >
+                    sfsfsd
+                </SkeletonCircle>
                 <SkeletonText mt="4" noOfLines={3} spacing="4" />
               </Box>
             </VStack>
