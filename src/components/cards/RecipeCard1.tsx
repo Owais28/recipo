@@ -81,7 +81,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
         </Wrap>
       </VStack>
 
-      <Drawer placement={"bottom"} onClose={onClose} isOpen={isOpen}>
+      <Drawer size={'lg'} placement={"bottom"} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent borderTopRadius={"2xl"}>
           <DrawerHeader
@@ -97,7 +97,12 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
           </DrawerHeader>
           <DrawerBody>
             <VStack gap={2} alignItems={"start"}>
-              <Box alignItems={"center"} w={"100%"} display={"flex"} justifyContent={"space-between"}>
+              <Box
+                alignItems={"center"}
+                w={"100%"}
+                display={"flex"}
+                justifyContent={"space-between"}
+              >
                 <Box pr={3}>
                   <Text
                     fontSize={"large"}
@@ -108,20 +113,18 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
                     {props.title}
                   </Text>
                 </Box>
-                
-                  <Box
-                    fontSize={"small"}
-                    display={"flex"}
-                    alignItems={"center"}
-                    fontWeight={"normal"}
-                    color={"grey"}
-                  >
-                    <Box mr={1}>
-                      <BsClock fontSize={"small"} color={"grey"} />
-                    </Box>
-                    <Text fontFamily={"Rubik"}>
-                        15min
-                    </Text>
+
+                <Box
+                  fontSize={"small"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  fontWeight={"normal"}
+                  color={"grey"}
+                >
+                  <Box mr={1}>
+                    <BsClock fontSize={"small"} color={"grey"} />
+                  </Box>
+                  <Text fontFamily={"Rubik"}>15min</Text>
                 </Box>
               </Box>
 
@@ -142,10 +145,10 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
                 </WrapItem>
               </Wrap>
 
-              <Box padding='6' boxShadow='lg' bg='white' w={"100%"}>
-  <SkeletonCircle size='10' />
-  <SkeletonText mt='4' noOfLines={1} spacing='4' />
-</Box>
+              <Box padding="6" boxShadow="xl" bg="white" w={"100%"}>
+                <SkeletonCircle size="10" />
+                <SkeletonText mt="4" noOfLines={3} spacing="4" />
+              </Box>
             </VStack>
           </DrawerBody>
         </DrawerContent>
