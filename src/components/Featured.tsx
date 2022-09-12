@@ -60,29 +60,31 @@ export const Featured = () => {
             height={"220px"}
             minW={"300px"}
             w={"300px"}
+            display={"flex"} alignItems={"end"}
           >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                letterSpacing={"wider"}
+                fontWeight={"bold"}
+              >
+                Asian white noodle with extra seafood
               </Text>
-            </WrapItem>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"13px"} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
           </Box>
 
           <Box
@@ -94,29 +96,31 @@ export const Featured = () => {
             height={"220px"}
             minW={"300px"}
             w={"300px"}
+            display={"flex"} alignItems={"end"}
           >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                letterSpacing={"wider"}
+                fontWeight={"bold"}
+              >
+                Asian white noodle with extra seafood
               </Text>
-            </WrapItem>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"13px"} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
           </Box>
 
           <Box
@@ -128,29 +132,31 @@ export const Featured = () => {
             height={"220px"}
             minW={"300px"}
             w={"300px"}
+            display={"flex"} alignItems={"end"}
           >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                letterSpacing={"wider"}
+                fontWeight={"bold"}
+              >
+                Asian white noodle with extra seafood
               </Text>
-            </WrapItem>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"13px"} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
           </Box>
 
           <Box
@@ -162,29 +168,31 @@ export const Featured = () => {
             height={"220px"}
             minW={"300px"}
             w={"300px"}
+            display={"flex"} alignItems={"end"}
           >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                letterSpacing={"wider"}
+                fontWeight={"bold"}
+              >
+                Asian white noodle with extra seafood
               </Text>
-            </WrapItem>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"13px"} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
           </Box>
 
           <Box
@@ -196,29 +204,31 @@ export const Featured = () => {
             height={"220px"}
             minW={"300px"}
             w={"300px"}
+            display={"flex"} alignItems={"end"}
           >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                letterSpacing={"wider"}
+                fontWeight={"bold"}
+              >
+                Asian white noodle with extra seafood
               </Text>
-            </WrapItem>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"13px"} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
           </Box>
 
           <Box
@@ -230,29 +240,31 @@ export const Featured = () => {
             height={"220px"}
             minW={"300px"}
             w={"300px"}
+            display={"flex"} alignItems={"end"}
           >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                letterSpacing={"wider"}
+                fontWeight={"bold"}
+              >
+                Asian white noodle with extra seafood
               </Text>
-            </WrapItem>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"13px"} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
           </Box>
 
           <Box
@@ -264,29 +276,31 @@ export const Featured = () => {
             height={"220px"}
             minW={"300px"}
             w={"300px"}
+            display={"flex"} alignItems={"end"}
           >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                letterSpacing={"wider"}
+                fontWeight={"bold"}
+              >
+                Asian white noodle with extra seafood
               </Text>
-            </WrapItem>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"13px"} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
           </Box>
 
           <Box
@@ -298,64 +312,33 @@ export const Featured = () => {
             height={"220px"}
             minW={"300px"}
             w={"300px"}
+            display={"flex"} alignItems={"end"}
           >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
+            <Box >
+              <Text
+                mb={2}
+                fontSize={"sm"}
+                lineHeight={"shorter"}
+                width={"80%"}
+                letterSpacing={"wider"}
+                fontWeight={"bold"}
+              >
+                Asian white noodle with extra seafood
               </Text>
-            </WrapItem>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"13px"} color={"whiteAlpha.800"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </Box>
           </Box>
 
-          <Box
-            overflow={"hidden"}
-            bg={"#71B9BE"}
-            p={4}
-            borderRadius={"xl"}
-            color={"white"}
-            height={"220px"}
-            minW={"300px"}
-            w={"300px"}
-          >
-            <Text
-              mb={2}
-              fontSize={"sm"}
-              lineHeight={"shorter"}
-              width={"80%"}
-              letterSpacing={"wider"}
-              mt={"20"}
-              fontWeight={"bold"}
-            >
-              Asian white noodle with extra seafood
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"13px"} color={"whiteAlpha.800"}>
-                James Spader
-              </Text>
-            </WrapItem>
-          </Box>
         </Flex>
       </Box>
     </Box>
