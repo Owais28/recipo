@@ -124,7 +124,7 @@ export const PopularRecipies = () => {
         <Link
           color="teal.500"
           fontWeight={"normal"}
-          fontSize={"x-small"}
+          fontSize={"small"}
           href="#"
         >
           See all
