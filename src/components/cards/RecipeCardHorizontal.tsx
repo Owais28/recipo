@@ -33,6 +33,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
   setTimeout(() => setLoading(false), 3000);
 
   return (
+      <Skeleton isLoaded={!loading} borderRadius={'xl'}>
     <Box
       p={2}
       borderRadius={"xl"}
@@ -42,9 +43,8 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
       boxShadow={"lg"}
       bg={"white"}
     >
-        <SkeletonText noOfLines={5} height={20} isLoaded={!loading}>
-      <Stack direction={"row"} height={"100%"} justify={"space-between"}>
-        <Box display={"flex"}>
+        <Stack direction={"row"} height={"100%"} justify={"space-between"}>
+          <Box display={"flex"}>
             {/* <Skeleton isLoaded/> */}
             <Image
               borderRadius={"xl"}
@@ -55,7 +55,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
               boxShadow={"md"}
               mr={2}
             />
-          {/* </Skeleton> */}
+            {/* </Skeleton> */}
             <VStack
               textAlign={"left"}
               p={1}
@@ -82,26 +82,26 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
                 </Text>
               </WrapItem>
             </VStack>
-        </Box>
-        <Box display={"grid"} justifyContent={"center"} alignItems={"center"}>
-          {/* <Button bg={'#0C2628'} _selected={{'color' : 'black',}} w p={0} borderRadius={'lg'}> */}
-          <RouterLink to="/completeRecipe">
-            <Box bg={"#0C2628"} borderRadius="lg" p={0.5} boxShadow={"base"}>
-              <Link
-                color="teal.500"
-                bg={"teal.50"}
-                fontWeight={"normal"}
-                fontSize={"small"}
-                href="#"
-              >
-                <BsArrowRightShort color="white" fontSize={"30px"} />
-              </Link>
-            </Box>
-          </RouterLink>
-          {/* </Button> */}
-        </Box>
-      </Stack>
-          </SkeletonText>
+          </Box>
+          <Box display={"grid"} justifyContent={"center"} alignItems={"center"}>
+            {/* <Button bg={'#0C2628'} _selected={{'color' : 'black',}} w p={0} borderRadius={'lg'}> */}
+            <RouterLink to="/completeRecipe">
+              <Box bg={"#0C2628"} borderRadius="lg" p={0.5} boxShadow={"base"}>
+                <Link
+                  color="teal.500"
+                  bg={"teal.50"}
+                  fontWeight={"normal"}
+                  fontSize={"small"}
+                  href="#"
+                >
+                  <BsArrowRightShort color="white" fontSize={"30px"} />
+                </Link>
+              </Box>
+            </RouterLink>
+            {/* </Button> */}
+          </Box>
+        </Stack>
     </Box>
+      </Skeleton>
   );
 };
