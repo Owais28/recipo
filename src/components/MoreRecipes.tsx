@@ -108,7 +108,7 @@ export const MoreRecipes = () => {
       ];
 
   return (
-    <Box maxW={"sm"} my={3}>
+    <Box maxW={"sm"} my={5} overflow={"hidden"}>
       <Text
         display={"flex"}
         alignItems={"center"}
@@ -117,6 +117,7 @@ export const MoreRecipes = () => {
         fontFamily={"Rubik"}
         color="#0C2628"
         fontWeight={"semibold"}
+        mb={3} 
       >
         More Recipes{" "}
         <RouterLink to="/completeRecipe">
@@ -130,7 +131,7 @@ export const MoreRecipes = () => {
           </Link>
         </RouterLink>
       </Text>
-      <VStack>
+      <VStack gap={1}>
         {
             recipiesByNutrients.map(
                 (recipe) => <RecipeCardHorizontal id={recipe.id} title={recipe.title} imgURL={recipe.image}/>
