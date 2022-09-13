@@ -21,24 +21,26 @@ export const RecipeCardHorizontal : FC<RecipesCardInterface> = ({id, title, imgU
   return (
     <Box p={2} borderRadius={"xl"} w={'100%'} height={'122px'} boxShadow={"lg"} bg={"white"}>
       <Stack direction={"row"} height={'100%'} justify={'space-between'}>
+        <Box display={"flex"} >
         <Image
           borderRadius={"xl"}
           src={imgURL}
-          w={"30%"}
+          w={"35%"}
           height={'100%'}
           objectFit={"cover"}
           boxShadow={'md'}
+          mr={2}
         />
-        <VStack textAlign={'left'} p={1} align={'start'}>
+        <VStack textAlign={'left'} p={1} align={'start'} justify={'space-between'}>
           <Text
             fontSize={"sm"}
             fontWeight={"bold"}
             fontFamily={"Noto Sans"}
             color={"#0C2628"}
           >
-            {title.length < 20
+            {title.length < 25
               ? title
-              : title.slice(0, 20) + "..."}
+              : title.slice(0, 25) + "..."}
           </Text>
           <WrapItem alignItems={"center"}>
             <Avatar
@@ -52,6 +54,7 @@ export const RecipeCardHorizontal : FC<RecipesCardInterface> = ({id, title, imgU
             </Text>
           </WrapItem>
         </VStack>
+              </Box>
         <Box display={'grid'} justifyContent={'center'} alignItems={'center'}>
             <Button bg={'#0C2628'} _selected={{'color' : 'black',}} width={'2px'} p={0} borderRadius={'lg'}>
             <BsArrowRightShort color="white" fontSize={'30px'}/>
