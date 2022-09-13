@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  ButtonSpinner,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -28,6 +29,8 @@ import { IoIosNutrition } from "react-icons/io";
 import { IoMdPizza } from "react-icons/io";
 import CheckCircleIcon from "@chakra-ui/icon";
 import { TiLeaf } from "react-icons/ti";
+import { Link, Route, Routes } from "react-router-dom";
+import { CompleteRecipe } from "../../routes/completeRecipe";
 
 interface RecipeInfoInterface {
   isOpen: boolean;
@@ -108,6 +111,7 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
               justifyContent={"center"}
               columnGap={6}
               rowGap={3}
+              mb={5}
             >
               <GridItem display={"flex"} alignItems={"center"}>
                 <Box
@@ -219,47 +223,6 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
               /> */}
             {/* </Box> */}
             {/* Ingredients Section */}
-            <Box fontFamily={"Rubik"} fontSize={'sm'} mt={"6"}>
-              <Tabs isLazy={true} width={'100%'} isFitted={true}>
-                <TabList gap={2} bg={'#E4E9F1'} p={1} display={'flex'} borderRadius={'xl'} fontWeight={"medium"}>
-                  <Tab _selected={{ color: "white", bg: "#0C2628" }} flex={1} fontSize={'sm'} fontWeight={"medium"} fontFamily={'Rubik'} borderRadius={"xl"}>
-                    Ingredients
-                  </Tab>
-                  <Tab _selected={{ color: "white", bg: "#0C2628" }} flex={1} fontSize={'sm'} fontWeight={"medium"} fontFamily={'Rubik'} borderRadius={"xl"}>
-                    Directions
-                  </Tab>
-                </TabList>
-                <TabPanels>
-                  <TabPanel >
-                    <Box>
-                       Ingredient 1
-                    </Box><Box>
-                       Ingredient 1
-                    </Box><Box>
-                       Ingredient 1
-                    </Box><Box>
-                       Ingredient 1
-                    </Box><Box>
-                       Ingredient 1
-                    </Box><Box>
-                       Ingredient 1
-                    </Box><Box>
-                       Ingredient 1
-                    </Box>
-                    <Box>
-                       Ingredient 1
-                    </Box><Box>
-                       Ingredient 1
-                    </Box><Box>
-                       Ingredient 1
-                    </Box>
-                  </TabPanel>
-                  <TabPanel>
-                    <p>two!</p>
-                  </TabPanel>
-                </TabPanels>
-              </Tabs>
-            </Box>
           </Box>
         </DrawerBody>
       </DrawerContent>

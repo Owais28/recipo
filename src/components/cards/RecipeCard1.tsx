@@ -36,6 +36,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [loading, setLoading] = useState(true);
 
+  const [recipeInfoLoad, setRecipeInfoLoad] = useState(false)
   
   setTimeout(() => setLoading(false), 3000);
   return (

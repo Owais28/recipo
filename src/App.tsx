@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import {
   ChakraProvider,
   Box,
@@ -10,23 +10,30 @@ import {
   HStack,
   Container,
   GridItem,
-  theme
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
-import { Featured } from "./components/Featured"
-import { PopularRecipies } from "./components/PopularRecipies"
-import { Navbar } from "./components/Navbar"
-
-
+  theme,
+} from "@chakra-ui/react";
+import { ColorModeSwitcher } from "./ColorModeSwitcher";
+import { Logo } from "./Logo";
+import { Featured } from "./components/Featured";
+import { PopularRecipies } from "./components/PopularRecipies";
+import { Navbar } from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import { CompleteRecipe } from "./routes/completeRecipe";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box width="100vw"  minH={"100vh"} bg="#ffffff" bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"} fontFamily={"Rubik"} p={3}>
-        {/* <ColorModeSwitcher justifySelf="flex-end"  /> */}
-        <Navbar person={"Owais"}/>
-        <Featured/>
-        <PopularRecipies/>
+    <Box
+      width="100vw"
+      minH={"100vh"}
+      bg="#ffffff"
+      bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
+      fontFamily={"Rubik"}
+      p={3}
+    >
+      {/* <ColorModeSwitcher justifySelf="flex-end"  /> */}
+      <Navbar person={"Owais"} />
+      <Featured />
+      <PopularRecipies />
     </Box>
   </ChakraProvider>
-)
+);
