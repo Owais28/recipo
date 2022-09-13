@@ -117,7 +117,7 @@ export const MoreRecipes = () => {
         fontFamily={"Rubik"}
         color="#0C2628"
         fontWeight={"semibold"}
-        mb={3} 
+        mb={1} 
       >
         More Recipes{" "}
         <RouterLink to="/completeRecipe">
@@ -131,7 +131,7 @@ export const MoreRecipes = () => {
           </Link>
         </RouterLink>
       </Text>
-      <VStack gap={1}>
+      <VStack gap={1} py={3} align={'stretch'} w={'100%'}>
         {
             recipiesByNutrients.map(
                 (recipe) => <RecipeCardHorizontal id={recipe.id} title={recipe.title} imgURL={recipe.image}/>

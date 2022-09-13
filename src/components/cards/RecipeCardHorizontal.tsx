@@ -11,6 +11,7 @@ import {
   Skeleton,
   useDisclosure,
   SkeletonText,
+  Flex,
 } from "@chakra-ui/react";
 import React, { FC, useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
@@ -38,22 +39,28 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
       p={2}
       borderRadius={"xl"}
       overflow={"hidden"}
-      w={"100%"}
+      w={"98%"}
+      minWidth={'98%'}
+    //   maxW={}
       height={"122px"}
       boxShadow={"lg"}
       bg={"white"}
     >
         <Stack direction={"row"} height={"100%"} justify={"space-between"}>
-          <Box display={"flex"}>
+          <Box display={'flex'}>
             {/* <Skeleton isLoaded/> */}
             <Image
               borderRadius={"xl"}
               src={imgURL}
-              w={"35%"}
+              minWidth={"100px"}
+              width={'100px'}
               height={"100%"}
               objectFit={"cover"}
               boxShadow={"md"}
-              mr={2}
+              
+              overflow={'hidden'}
+            //   flex={1}
+            mr={2}
             />
             {/* </Skeleton> */}
             <VStack
@@ -61,14 +68,18 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
               p={1}
               align={"start"}
               justify={"space-between"}
+              pr={2}
+
             >
               <Text
                 fontSize={"sm"}
                 fontWeight={"bold"}
                 fontFamily={"Noto Sans"}
                 color={"#0C2628"}
+                maxH={'53px'}
+                overflow={"hidden"}
               >
-                {title.length < 30 ? title : title.slice(0, 30) + "..."}
+                {title.length < 27 ? title : title.slice(0, 27) + "..."}
               </Text>
               <WrapItem alignItems={"center"}>
                 <Avatar
