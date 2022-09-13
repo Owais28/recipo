@@ -12,10 +12,12 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { BiArrowBack} from "react-icons/bi";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate} from "react-router-dom";
 // import {ArrowBackIcon} from '@c'
 
 export const CompleteRecipe = () => {
+
+
 
   const navigate = useNavigate();
   return (

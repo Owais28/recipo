@@ -20,9 +20,11 @@ import { Navbar } from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import { CompleteRecipe } from "./pages/completeRecipe";
 import { MoreRecipes } from "./components/MoreRecipes";
+import { MainMenu } from "./components/MainMenu";
 
 export const App = () => (
-  
+  <div>
+
     <Box
       width="100vw"
       minH={"100vh"}
@@ -37,4 +39,6 @@ export const App = () => (
       <PopularRecipies />
       <MoreRecipes/>
     </Box>
+    <MainMenu/>
+    </div>
 );
