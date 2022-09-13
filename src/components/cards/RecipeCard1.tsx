@@ -2,26 +2,17 @@ import {
   Box,
   Image,
   Text,
-  Wrap,
-  WrapItem,
   VStack,
-  Button,
-  Drawer,
-  DrawerBody,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
   useDisclosure,
   Skeleton,
-  Stack,
-  SkeletonCircle,
   SkeletonText,
 } from "@chakra-ui/react";
-import React, { FC, useState } from "react";
+
+import  { FC, useState } from "react";
 import { AiOutlineFire } from "react-icons/ai";
-import { BsClock } from "react-icons/bs";
+// import { BsClock } from "react-icons/bs";
 import { IoIosNutrition } from "react-icons/io";
-import CheckCircleIcon from "@chakra-ui/icon";
+// import CheckCircleIcon from "@chakra-ui/icon";
 import { RecipeInfo } from "../Drawer/RecipeInfo";
 interface PopularRecipesCardInterface {
   id: Number;
@@ -37,7 +28,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [loading, setLoading] = useState(true);
 
-  const [recipeInfoLoad, setRecipeInfoLoad] = useState(false)
+//   const [recipeInfoLoad, setRecipeInfoLoad] = useState(false);
 
   setTimeout(() => setLoading(false), 3000);
   return (
@@ -104,7 +95,18 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
           </Box>
         </SkeletonText>
       </VStack>
-      <RecipeInfo imgURL={props.imgURL} isOpen={isOpen} onClose={onClose} title={props.title} calories={props.calories} carbs={props.carbs} id={props.id} fat={props.fat} protein={props.protein} key={props.title}/>
+      <RecipeInfo
+        imgURL={props.imgURL}
+        isOpen={isOpen}
+        onClose={onClose}
+        title={props.title}
+        calories={props.calories}
+        carbs={props.carbs}
+        id={props.id}
+        fat={props.fat}
+        protein={props.protein}
+        key={props.title}
+      />
     </Box>
   );
 };

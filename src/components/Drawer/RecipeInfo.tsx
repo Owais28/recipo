@@ -9,7 +9,7 @@ import {
   GridItem,
   Text,
 } from "@chakra-ui/react";
-import { FC, useState } from "react";
+import { FC } from "react";
 import { AiOutlineFire } from "react-icons/ai";
 import { BsClock } from "react-icons/bs";
 import { IoIosNutrition } from "react-icons/io";
@@ -32,9 +32,9 @@ interface RecipeInfoInterface {
 }
 export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
   //   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [loading, setLoading] = useState(true);
+//   const [loading, setLoading] = useState(true);
 
-  setTimeout(() => setLoading(false), 3000);
+//   setTimeout(() => setLoading(false), 3000);
 
   return (
     <Drawer

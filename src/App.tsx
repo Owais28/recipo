@@ -1,26 +1,17 @@
 import * as React from "react";
 import {
-  ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  HStack,
-  Container,
-  GridItem,
-  theme,
 } from "@chakra-ui/react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import { Logo } from "./Logo";
+// import { ColorModeSwitcher } from "./ColorModeSwitcher";
+// import { Logo } from "./Logo";
 import { Featured } from "./components/Featured";
 import { PopularRecipies } from "./components/PopularRecipes";
 import { Navbar } from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
-import { CompleteRecipe } from "./pages/completeRecipe";
+// import { Routes } from "react-router-dom";
+// import { CompleteRecipe } from "./pages/completeRecipe";
 import { MoreRecipes } from "./components/MoreRecipes";
 import { MainMenu } from "./components/MainMenu";
+import { SpaceComponent } from "./components/SpaceComponent";
 
 export const App = () => (
   <div>
@@ -38,6 +29,7 @@ export const App = () => (
       <Featured />
       <PopularRecipies />
       <MoreRecipes/>
+      <SpaceComponent/>
     </Box>
     <MainMenu/>
     </div>

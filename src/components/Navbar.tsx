@@ -1,16 +1,11 @@
 import {
   Avatar,
-  AvatarBadge,
   Box,
-  Flex,
   Grid,
   Text,
-  VStack,
   Wrap,
   WrapItem,
   Image,
-  Skeleton,
-  SkeletonCircle,
   SkeletonText,
 } from "@chakra-ui/react";
 import React, { useState } from "react";

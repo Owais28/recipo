@@ -1,5 +1,4 @@
-import { Box, Flex, Link, Text, VStack, Image, Button, Drawer, DrawerContent } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Link, Text} from "@chakra-ui/react";
 import { RecipeCard1 } from "./cards/RecipeCard1";
 
 export const PopularRecipies = () => {

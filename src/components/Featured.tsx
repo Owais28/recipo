@@ -1,21 +1,4 @@
-import {
-  Box,
-  Badge,
-  Text,
-  Image,
-  HStack,
-  Flex,
-  WrapItem,
-  Avatar,
-  Drawer,
-  Button,
-  DrawerOverlay,
-  useDisclosure,
-  DrawerContent,
-  DrawerHeader,
-  DrawerBody,
-  Skeleton,
-} from "@chakra-ui/react";
+import { Box, Text, Flex, WrapItem, Avatar, Skeleton } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 export const Featured = () => {

@@ -6,12 +6,8 @@ import {
   Text,
   Avatar,
   WrapItem,
-  Button,
   Link,
   Skeleton,
-  useDisclosure,
-  SkeletonText,
-  Flex,
 } from "@chakra-ui/react";
 import React, { FC, useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
@@ -27,7 +23,6 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
   title,
   imgURL,
 }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const [loading, setLoading] = useState(true);
 
   //
