@@ -8,8 +8,11 @@ import {
   WrapItem,
   Button,
   Link,
+  Skeleton,
+  useDisclosure,
+  SkeletonText,
 } from "@chakra-ui/react";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Link as RouterLink } from "react-router-dom";
 interface RecipesCardInterface {
@@ -23,6 +26,12 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
   title,
   imgURL,
 }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [loading, setLoading] = useState(true);
+
+  //
+  setTimeout(() => setLoading(false), 3000);
+
   return (
     <Box
       p={2}
@@ -33,43 +42,46 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
       boxShadow={"lg"}
       bg={"white"}
     >
+        <SkeletonText noOfLines={5} height={20} isLoaded={!loading}>
       <Stack direction={"row"} height={"100%"} justify={"space-between"}>
         <Box display={"flex"}>
-          <Image
-            borderRadius={"xl"}
-            src={imgURL}
-            w={"35%"}
-            height={"100%"}
-            objectFit={"cover"}
-            boxShadow={"md"}
-            mr={2}
-          />
-          <VStack
-            textAlign={"left"}
-            p={1}
-            align={"start"}
-            justify={"space-between"}
-          >
-            <Text
-              fontSize={"sm"}
-              fontWeight={"bold"}
-              fontFamily={"Noto Sans"}
-              color={"#0C2628"}
+            {/* <Skeleton isLoaded/> */}
+            <Image
+              borderRadius={"xl"}
+              src={imgURL}
+              w={"35%"}
+              height={"100%"}
+              objectFit={"cover"}
+              boxShadow={"md"}
+              mr={2}
+            />
+          {/* </Skeleton> */}
+            <VStack
+              textAlign={"left"}
+              p={1}
+              align={"start"}
+              justify={"space-between"}
             >
-              {title.length < 30 ? title : title.slice(0, 30) + "..."}
-            </Text>
-            <WrapItem alignItems={"center"}>
-              <Avatar
-                size={"xs"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
-              <Text fontSize={"14px"} fontFamily={"Noto Sans"} color={"grey"}>
-                James Spader
+              <Text
+                fontSize={"sm"}
+                fontWeight={"bold"}
+                fontFamily={"Noto Sans"}
+                color={"#0C2628"}
+              >
+                {title.length < 30 ? title : title.slice(0, 30) + "..."}
               </Text>
-            </WrapItem>
-          </VStack>
+              <WrapItem alignItems={"center"}>
+                <Avatar
+                  size={"xs"}
+                  name="Dan Abrahmov"
+                  mr={2}
+                  src="https://bit.ly/dan-abramov"
+                />
+                <Text fontSize={"14px"} fontFamily={"Noto Sans"} color={"grey"}>
+                  James Spader
+                </Text>
+              </WrapItem>
+            </VStack>
         </Box>
         <Box display={"grid"} justifyContent={"center"} alignItems={"center"}>
           {/* <Button bg={'#0C2628'} _selected={{'color' : 'black',}} w p={0} borderRadius={'lg'}> */}
@@ -89,6 +101,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
           {/* </Button> */}
         </Box>
       </Stack>
+          </SkeletonText>
     </Box>
   );
 };
