@@ -15,13 +15,14 @@ import {
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { Logo } from "./Logo";
 import { Featured } from "./components/Featured";
-import { PopularRecipies } from "./components/PopularRecipies";
+import { PopularRecipies } from "./components/PopularRecipes";
 import { Navbar } from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
-import { CompleteRecipe } from "./routes/completeRecipe";
+import { CompleteRecipe } from "./pages/completeRecipe";
+import { MoreRecipes } from "./components/MoreRecipes";
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
+  
     <Box
       width="100vw"
       minH={"100vh"}
@@ -34,6 +35,6 @@ export const App = () => (
       <Navbar person={"Owais"} />
       <Featured />
       <PopularRecipies />
+      <MoreRecipes/>
     </Box>
-  </ChakraProvider>
 );

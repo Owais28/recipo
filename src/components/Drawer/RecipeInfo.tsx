@@ -1,36 +1,23 @@
 import {
   Box,
-  Button,
-  ButtonSpinner,
   Drawer,
   DrawerBody,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  DrawerProps,
   Grid,
   GridItem,
-  SkeletonText,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
   Text,
-  useDisclosure,
-  VStack,
-  Wrap,
-  WrapItem,
 } from "@chakra-ui/react";
-import React, { EffectCallback, FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { AiOutlineFire } from "react-icons/ai";
 import { BsClock } from "react-icons/bs";
 import { IoIosNutrition } from "react-icons/io";
 import { IoMdPizza } from "react-icons/io";
 import CheckCircleIcon from "@chakra-ui/icon";
 import { TiLeaf } from "react-icons/ti";
-import { Link, Route, Routes } from "react-router-dom";
-import { CompleteRecipe } from "../../routes/completeRecipe";
+// import { Link, Route, Routes } from "react-router-dom";
+// import { CompleteRecipe } from "../../routes/completeRecipe";
 
 interface RecipeInfoInterface {
   isOpen: boolean;

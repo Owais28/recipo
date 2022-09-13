@@ -120,7 +120,7 @@ export const PopularRecipies = () => {
         color="#0C2628"
         fontWeight={"semibold"}
       >
-        Popular Recipies{" "}
+        Popular Recipes{" "}
         <Link
           color="teal.500"
           fontWeight={"normal"}
