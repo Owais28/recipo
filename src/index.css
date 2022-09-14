@@ -1,0 +1,3 @@
+.main__menu-link.active .chakra-button {
+    border-top: 2px solid teal;
+}

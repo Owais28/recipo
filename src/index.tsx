@@ -1,11 +1,11 @@
-import { ChakraProvider, ColorModeScript,  theme } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript, theme } from "@chakra-ui/react";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter,  Route, Routes } from "react-router-dom";
-import { CompleteRecipe } from "./pages/completeRecipe";
+import { BrowserRouter} from "react-router-dom";
+// import { CompleteRecipe } from "./pages/CompleteRecipe";
 
 const container = document.getElementById("root");
 if (!container) throw new Error("Failed to find the root element");
@@ -13,16 +13,16 @@ const root = ReactDOM.createRoot(container);
 
 root.render(
   <ChakraProvider theme={theme}>
-  <BrowserRouter>
-    <React.StrictMode>
-      <ColorModeScript />
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="completeRecipe" element={<CompleteRecipe />} />
-      </Routes>
-      {/* <App /> */}
-    </React.StrictMode>
-  </BrowserRouter>
+      <React.StrictMode>
+    <BrowserRouter>
+        <ColorModeScript />
+        {/* <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="completeRecipe" element={<CompleteRecipe />} />
+        </Routes> */}
+        <App />
+    </BrowserRouter>
+      </React.StrictMode>
   </ChakraProvider>
 );
 
