@@ -15,14 +15,11 @@ export const HomePage = () => {
       fontFamily={"Rubik"}
       p={3}
     >
-      <Navbar person={"Owais"} />
+      <Navbar person={"Stranger"} />
       <Featured />
       <PopularRecipies />
       <MoreRecipes />
       <SpaceComponent />
-      {/* <Routes>
-        <Route path="/completeRecipe" element={<CompleteRecipe />} />
-      </Routes> */}
     </Box>
   );
 };

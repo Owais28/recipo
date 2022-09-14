@@ -33,7 +33,7 @@ export const CompleteRecipe = () => {
     >
       <Wrap display={'flex'} width={'100%'} mb={4} justify={"space-between"} align={'center'}>
         <WrapItem onClick={
-          () => navigate('/')
+          () => navigate(-1)
         } flex={1} p={2}>
           <BiArrowBack size={20}/>
         </WrapItem>
