@@ -1,8 +1,11 @@
 import { Box, Text, Link, VStack } from "@chakra-ui/react";
-import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { RecipeCardHorizontal } from "./cards/RecipeCardHorizontal";
 
+/**
+ * @author 'Owais Athar'
+ * @returns  
+ */
 export const MoreRecipes = () => {
     const recipiesByNutrients = [
         {

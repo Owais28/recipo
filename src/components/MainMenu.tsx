@@ -14,11 +14,11 @@ export const MainMenu = () => {
       bg={"white"}
       boxShadow={"xs"}
       maxWidth={"md"}
-      width={'100vw'}
+      width={"100vw"}
     >
       <HStack align={"center"} alignItems={"center"} justify={"center"} gap={0}>
         <Box flex={1}>
-          <NavLink className='main__menu-link' to={"/"}>
+          <NavLink className="main__menu-link" to={"/"}>
             <Button
               colorScheme="teal"
               width={"100%"}
@@ -32,7 +32,12 @@ export const MainMenu = () => {
             >
               <VStack spacing={0}>
                 <HiHome fontSize={20} />
-                <Text fontSize={11} fontFamily={'Rubik'} fontWeight='normal' color={"#0C2628"}>
+                <Text
+                  fontSize={11}
+                  fontFamily={"Rubik"}
+                  fontWeight="normal"
+                  color={"#0C2628"}
+                >
                   Home
                 </Text>
               </VStack>
@@ -41,83 +46,71 @@ export const MainMenu = () => {
         </Box>
 
         <Box flex={1}>
-        <NavLink className='main__menu-link' to={"/search"}>
-          <Button
-            colorScheme="gray"
-            width={"100%"}
-            px={4}
-            py={5}
-            _selected={{
-              color: "black",
-            }}
-            variant="ghost"
-            borderRadius={0}
-          >
-            <VStack spacing={0}>
-              <FiSearch fontSize={20} />
-              <Text
-                fontSize={11}
-                fontFamily={"Rubik"}
-                fontWeight="normal"
-              >
-                Search
-              </Text>
-            </VStack>
-          </Button>
+          <NavLink className="main__menu-link" to={"/search"}>
+            <Button
+              colorScheme="gray"
+              width={"100%"}
+              px={4}
+              py={5}
+              _selected={{
+                color: "black",
+              }}
+              variant="ghost"
+              borderRadius={0}
+            >
+              <VStack spacing={0}>
+                <FiSearch fontSize={20} />
+                <Text fontSize={11} fontFamily={"Rubik"} fontWeight="normal">
+                  Search
+                </Text>
+              </VStack>
+            </Button>
           </NavLink>
         </Box>
 
         <Box flex={1}>
-        <NavLink className='main__menu-link' to={"/notification"}>
-          <Button
-            colorScheme="gray"
-            width={"100%"}
-            px={4}
-            py={5}
-            _selected={{
-              color: "black",
-            }}
-            variant="ghost"
-            borderRadius={0}
-          >
-            <VStack spacing={0}>
-              <IoIosNotificationsOutline fontSize={20} />
-              <Text
-                fontSize={11}
-                fontFamily={"Rubik"}
-                fontWeight={"normal"}
-              >
-                Notification
-              </Text>
-            </VStack>
-          </Button>
+          <NavLink className="main__menu-link" to={"/notification"}>
+            <Button
+              colorScheme="gray"
+              width={"100%"}
+              px={4}
+              py={5}
+              _selected={{
+                color: "black",
+              }}
+              variant="ghost"
+              borderRadius={0}
+            >
+              <VStack spacing={0}>
+                <IoIosNotificationsOutline fontSize={20} />
+                <Text fontSize={11} fontFamily={"Rubik"} fontWeight={"normal"}>
+                  Notification
+                </Text>
+              </VStack>
+            </Button>
           </NavLink>
         </Box>
 
         <Box flex={1}>
-        <NavLink className='main__menu-link' to={"/user"}>
-          <Button
-            colorScheme="gray"
-            width={"100%"}
-            px={4}
-            py={5}
-            _selected={{
-              color: "black",
-            }}
-            variant="ghost"
-            borderRadius={0}
-          >
-            <VStack spacing={0}>
-              <BsPersonFill fontSize={20} />
-              <Text
-                fontSize={11}
-                fontFamily={"Rubik"}
-                fontWeight={"normal"}
-              >
-                Profile
-              </Text>
-            </VStack>
-          </Button>
+          <NavLink className="main__menu-link" to={"/user"}>
+            <Button
+              colorScheme="gray"
+              width={"100%"}
+              px={4}
+              py={5}
+              _selected={{
+                color: "black",
+              }}
+              variant="ghost"
+              borderRadius={0}
+            >
+              <VStack spacing={0}>
+                <BsPersonFill fontSize={20} />
+                <Text fontSize={11} fontFamily={"Rubik"} fontWeight={"normal"}>
+                  Profile
+                </Text>
+              </VStack>
+            </Button>
           </NavLink>
         </Box>
       </HStack>

@@ -8,33 +8,40 @@ import {
   SkeletonText,
 } from "@chakra-ui/react";
 
-import  { FC, useState } from "react";
+import { FC, ReactElement, useState } from "react";
 import { AiOutlineFire } from "react-icons/ai";
-// import { BsClock } from "react-icons/bs";
 import { IoIosNutrition } from "react-icons/io";
-// import CheckCircleIcon from "@chakra-ui/icon";
 import { RecipeInfo } from "../Drawer/RecipeInfo";
+
+
+
 interface PopularRecipesCardInterface {
-  id: Number;
+  id: number ;
   title: string;
   imgURL: string;
-  calories: Number;
+  calories: number ;
   protein: string;
   fat: string;
   carbs: string;
 }
 
-export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
+/**
+ * This component render a recipe info into the card
+ */
+export const RecipeCard1: FC<PopularRecipesCardInterface> = (
+  props: PopularRecipesCardInterface
+) => {
+  let { id, calories, carbs, fat, imgURL, protein, title } = props;
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [loading, setLoading] = useState(true);
 
-//   const [recipeInfoLoad, setRecipeInfoLoad] = useState(false);
-
+  // setTimeout function is used for <Skeleton/> and </SkeletonText/> component
   setTimeout(() => setLoading(false), 3000);
   return (
     <Box
       onClick={onOpen}
-      data-recipe-id={props.id}
+      data-recipe-id={id}
       padding={3}
       width={"60%"}
       minW={"60%"}
@@ -42,10 +49,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
       borderRadius={"2xl"}
       bg={"white"}
       position={"relative"}
-      overflow={'hidden'}
-      //   bgGradient={
-      //     "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
-      //   }
+      overflow={"hidden"}
     >
       <VStack gap={2} justify={"start"} alignItems={"start"}>
         <Skeleton borderRadius={"xl"} isLoaded={!loading}>
@@ -53,23 +57,20 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
             borderRadius={"2xl"}
             objectFit={"cover"}
             boxSize={"100%"}
-            src={props.imgURL}
+            src={imgURL}
             shadow={"base"}
           />
         </Skeleton>
         <SkeletonText mt="4" noOfLines={3} spacing="4" isLoaded={!loading}>
           <Text
-            //   mb={2}
             fontSize={"sm"}
             fontWeight={"bold"}
             fontFamily={"Noto Sans"}
             color={"#0C2628"}
             height={"53px"}
-            overflow={'hidden'}
+            overflow={"hidden"}
           >
-            {props.title.length < 40
-              ? props.title
-              : props.title.slice(0, 37) + "..."}
+            {title.length < 40 ? title : title.slice(0, 37) + "..."}
           </Text>
         </SkeletonText>
         <SkeletonText mt="4" noOfLines={1} spacing="4" isLoaded={!loading}>
@@ -86,28 +87,28 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
                   <AiOutlineFire />
                 </Box>
                 {`
-              ${props.calories}`}{" "}
+              ${calories}`}{" "}
                 calories <Box>&bull;</Box>{" "}
                 <Box color={"#71B9BE"} ml={1} mr={1}>
                   <IoIosNutrition />
                 </Box>
-                <Box>{`${props.carbs} carbs`}</Box>
+                <Box>{`${carbs} carbs`}</Box>
               </Text>
             </Box>
           </Box>
         </SkeletonText>
       </VStack>
       <RecipeInfo
-        imgURL={props.imgURL}
+        imgURL={imgURL}
         isOpen={isOpen}
         onClose={onClose}
-        title={props.title}
-        calories={props.calories}
-        carbs={props.carbs}
-        id={props.id}
-        fat={props.fat}
-        protein={props.protein}
-        key={props.title}
+        title={title}
+        calories={calories}
+        carbs={carbs}
+        id={id}
+        fat={fat}
+        protein={protein}
+        key={title}
       />
     </Box>
   );

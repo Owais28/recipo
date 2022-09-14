@@ -40,6 +40,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
       height={"122px"}
       boxShadow={"lg"}
       bg={"white"}
+      data-recipe-id={id}
     >
         <Stack direction={"row"} height={"100%"} justify={"space-between"}>
           <Box display={'flex'}>

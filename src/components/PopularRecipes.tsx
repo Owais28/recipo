@@ -1,9 +1,9 @@
 import { Box, Flex, Link, Text} from "@chakra-ui/react";
 import { RecipeCard1 } from "./cards/RecipeCard1";
 
+
+
 export const PopularRecipies = () => {
-  
-  
 
   const recipiesByNutrients = [
     {
