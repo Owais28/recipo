@@ -1,10 +1,14 @@
-import { Box, Heading, HStack, Wrap, WrapItem } from "@chakra-ui/react"
-import { useNavigate } from "react-router-dom"
+import { Box, Heading, HStack, 
+    // Wrap, 
+    // WrapItem
+ } from "@chakra-ui/react";
+// import { useNavigate } from "react-router-dom";
 
 export const SearchPage = () => {
+  //   const navigate = useNavigate();
 
-    const navigate = useNavigate();
-    
+  document.title = "Recipo | Profile"
+
   return (
     <Box
       width="100vw"
@@ -16,15 +20,21 @@ export const SearchPage = () => {
       fontSize={"sm"}
       mt={2}
     >
-      <HStack width={'100%'} mb={4} justify={"space-between"} align={'stretch'}>
+      <HStack width={"100%"} mb={4} justify={"space-between"} align={"stretch"}>
         {/* <WrapItem onClick={
           () => navigate(-1)
         } flex={1} p={2}>
           <BiArrowBack size={20}/>
         </WrapItem> */}
-          <Heading fontSize={'lg'} alignItems={'center'} mx={'auto'} fontFamily={'Rubik'} fontWeight={'medium'}>
-            Search Recipe
-          </Heading>
+        <Heading
+          fontSize={"lg"}
+          alignItems={"center"}
+          mx={"auto"}
+          fontFamily={"Rubik"}
+          fontWeight={"medium"}
+        >
+          Search Recipe
+        </Heading>
       </HStack>
       {/* <Tabs isLazy={true} width={"100%"} isFitted={true}>
         <TabList
@@ -75,5 +85,5 @@ export const SearchPage = () => {
         </TabPanels>
       </Tabs> */}
     </Box>
-  )
-}
+  );
+};

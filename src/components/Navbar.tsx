@@ -16,7 +16,7 @@ export const Navbar = ({ person = "Stranger" }) => {
   setTimeout(() => setLoading(false), 3000);
 
   return (
-    <Box maxW={"sm"}>
+    <Box maxW={"100%"}>
       <Wrap justify={"space-between"} py={"2"} mb={3} align={"center"}>
         <WrapItem flex={1}>
           <SkeletonText noOfLines={2} isLoaded={!loading}>

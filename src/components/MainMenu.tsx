@@ -13,7 +13,8 @@ export const MainMenu = () => {
       bottom={0}
       bg={"white"}
       boxShadow={"xs"}
-      width={"100vw"}
+      maxWidth={"sm"}
+      width={'100%'}
     >
       <HStack align={"center"} alignItems={"center"} justify={"center"}>
         <Box flex={1}>

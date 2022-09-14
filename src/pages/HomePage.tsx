@@ -6,9 +6,11 @@ import { PopularRecipies } from "../components/PopularRecipes";
 import { SpaceComponent } from "../components/SpaceComponent";
 
 export const HomePage = () => {
+  document.title = "Recipo | Home";
+
   return (
     <Box
-      width="100vw"
+      maxW="sm"
       minH={"100vh"}
       bg="#ffffff"
       bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
