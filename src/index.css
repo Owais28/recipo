@@ -1,3 +1,11 @@
 .main__menu-link.active .chakra-button {
     border-top: 2px solid teal;
+} 
+
+.main__menu-link.active .chakra-text {
+    font-weight: 500;
+}
+
+.main__menu-link .chakra-text {
+    margin-top: 2px;
 }

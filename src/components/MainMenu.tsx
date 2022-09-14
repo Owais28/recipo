@@ -16,14 +16,14 @@ export const MainMenu = () => {
       maxWidth={"md"}
       width={'100vw'}
     >
-      <HStack align={"center"} alignItems={"center"} justify={"center"}>
+      <HStack align={"center"} alignItems={"center"} justify={"center"} gap={0}>
         <Box flex={1}>
           <NavLink className='main__menu-link' to={"/"}>
             <Button
               colorScheme="teal"
               width={"100%"}
               px={4}
-              py={4}
+              py={5}
               _selected={{
                 color: "black",
               }}
@@ -32,7 +32,7 @@ export const MainMenu = () => {
             >
               <VStack spacing={0}>
                 <HiHome fontSize={20} />
-                <Text fontSize={11} color={"#0C2628"}>
+                <Text fontSize={11} fontFamily={'Rubik'} fontWeight='normal' color={"#0C2628"}>
                   Home
                 </Text>
               </VStack>
@@ -46,7 +46,7 @@ export const MainMenu = () => {
             colorScheme="gray"
             width={"100%"}
             px={4}
-            py={4}
+            py={5}
             _selected={{
               color: "black",
             }}
@@ -57,8 +57,8 @@ export const MainMenu = () => {
               <FiSearch fontSize={20} />
               <Text
                 fontSize={11}
-                fontFamily={"Noto Sans"}
-                fontWeight={"normal"}
+                fontFamily={"Rubik"}
+                fontWeight="normal"
               >
                 Search
               </Text>
@@ -73,7 +73,7 @@ export const MainMenu = () => {
             colorScheme="gray"
             width={"100%"}
             px={4}
-            py={4}
+            py={5}
             _selected={{
               color: "black",
             }}
@@ -84,7 +84,7 @@ export const MainMenu = () => {
               <IoIosNotificationsOutline fontSize={20} />
               <Text
                 fontSize={11}
-                fontFamily={"Noto Sans"}
+                fontFamily={"Rubik"}
                 fontWeight={"normal"}
               >
                 Notification
@@ -100,7 +100,7 @@ export const MainMenu = () => {
             colorScheme="gray"
             width={"100%"}
             px={4}
-            py={4}
+            py={5}
             _selected={{
               color: "black",
             }}
@@ -111,7 +111,7 @@ export const MainMenu = () => {
               <BsPersonFill fontSize={20} />
               <Text
                 fontSize={11}
-                fontFamily={"Noto Sans"}
+                fontFamily={"Rubik"}
                 fontWeight={"normal"}
               >
                 Profile
