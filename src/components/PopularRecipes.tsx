@@ -109,7 +109,7 @@ export const PopularRecipies = () => {
   ];
 
   return (
-    <Box maxW={"sm"} my={3}>
+    <Box maxW={"md"} my={3}>
       <Text
         display={"flex"}
         alignItems={"center"}

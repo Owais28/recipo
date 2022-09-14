@@ -42,6 +42,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
       borderRadius={"2xl"}
       bg={"white"}
       position={"relative"}
+      overflow={'hidden'}
       //   bgGradient={
       //     "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
       //   }
@@ -64,6 +65,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (props) => {
             fontFamily={"Noto Sans"}
             color={"#0C2628"}
             height={"53px"}
+            overflow={'hidden'}
           >
             {props.title.length < 40
               ? props.title

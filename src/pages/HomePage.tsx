@@ -10,7 +10,8 @@ export const HomePage = () => {
 
   return (
     <Box
-      maxW="sm"
+      maxW={'md'}
+    //   width={'sm'}
       minH={"100vh"}
       bg="#ffffff"
       bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}

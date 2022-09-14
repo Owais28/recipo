@@ -13,8 +13,8 @@ export const MainMenu = () => {
       bottom={0}
       bg={"white"}
       boxShadow={"xs"}
-      maxWidth={"sm"}
-      width={'100%'}
+      maxWidth={"md"}
+      width={'100vw'}
     >
       <HStack align={"center"} alignItems={"center"} justify={"center"}>
         <Box flex={1}>
@@ -23,7 +23,7 @@ export const MainMenu = () => {
               colorScheme="teal"
               width={"100%"}
               px={4}
-              py={3}
+              py={4}
               _selected={{
                 color: "black",
               }}
@@ -46,7 +46,7 @@ export const MainMenu = () => {
             colorScheme="gray"
             width={"100%"}
             px={4}
-            py={3}
+            py={4}
             _selected={{
               color: "black",
             }}
@@ -73,7 +73,7 @@ export const MainMenu = () => {
             colorScheme="gray"
             width={"100%"}
             px={4}
-            py={3}
+            py={4}
             _selected={{
               color: "black",
             }}
@@ -100,7 +100,7 @@ export const MainMenu = () => {
             colorScheme="gray"
             width={"100%"}
             px={4}
-            py={3}
+            py={4}
             _selected={{
               color: "black",
             }}

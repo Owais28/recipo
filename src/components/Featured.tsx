@@ -7,7 +7,7 @@ export const Featured = () => {
   setTimeout(() => setLoading(false), 3000);
 
   return (
-    <Box maxW="sm" overflow="hidden">
+    <Box maxW="md" overflow="hidden">
       <Text
         fontSize="lg"
         fontFamily={"Rubik"}

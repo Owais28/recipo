@@ -108,7 +108,7 @@ export const MoreRecipes = () => {
       ];
 
   return (
-    <Box maxW={"sm"} my={5} overflow={"hidden"}>
+    <Box maxW={"md"} my={5} overflow={"hidden"}>
       <Text
         display={"flex"}
         alignItems={"center"}
