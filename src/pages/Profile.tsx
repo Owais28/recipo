@@ -12,7 +12,6 @@ export const Profile = () => {
       fontFamily={"Rubik"}
       p={3}
       fontSize={"sm"}
-      mt={2}
     >
       <HStack width={"100%"} mb={4} justify={"space-between"} align={"stretch"}>
         {/* <WrapItem onClick={

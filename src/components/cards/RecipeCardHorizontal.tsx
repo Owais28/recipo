@@ -38,7 +38,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
       minWidth={'98%'}
     //   maxW={}
       height={"122px"}
-      boxShadow={"lg"}
+      boxShadow={"md"}
       bg={"white"}
       data-recipe-id={id}
     >
@@ -92,7 +92,9 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
           </Box>
           <Box display={"grid"} justifyContent={"center"} alignItems={"center"}>
             {/* <Button bg={'#0C2628'} _selected={{'color' : 'black',}} w p={0} borderRadius={'lg'}> */}
-            <RouterLink to="/completeRecipe">
+            <RouterLink to="/completeRecipe" state={{data : {
+              recipeID : id
+            }}}>
               <Box bg={"#0C2628"} borderRadius="lg" p={0.5} boxShadow={"base"}>
                 <Link
                   color="teal.500"

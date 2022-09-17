@@ -11,15 +11,17 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 
-import { BiArrowBack} from "react-icons/bi";
-import { useNavigate} from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
+import { useLocation, useNavigate } from "react-router-dom";
 // import {ArrowBackIcon} from '@c'
 
 export const CompleteRecipe = () => {
-
-
+  const location = useLocation();
+  const recipeID = location
+  console.log(location)
 
   const navigate = useNavigate();
+
   return (
     <Box
       width="100vw"
@@ -31,14 +33,18 @@ export const CompleteRecipe = () => {
       fontSize={"sm"}
       mt={2}
     >
-      <Wrap display={'flex'} width={'100%'} mb={4} justify={"space-between"} align={'center'}>
-        <WrapItem onClick={
-          () => navigate(-1)
-        } flex={1} p={2}>
-          <BiArrowBack size={20}/>
+      <Wrap
+        display={"flex"}
+        width={"100%"}
+        mb={4}
+        justify={"space-between"}
+        align={"center"}
+      >
+        <WrapItem onClick={() => navigate(-1)} flex={1} p={2}>
+          <BiArrowBack size={20} />
         </WrapItem>
         <WrapItem flex={1}>
-          <Heading fontSize={'lg'} fontFamily={'Rubik'} fontWeight={'medium'}>
+          <Heading fontSize={"lg"} fontFamily={"Rubik"} fontWeight={"medium"}>
             Recipes
           </Heading>
         </WrapItem>
@@ -88,7 +94,9 @@ export const CompleteRecipe = () => {
               Load Ingredients
             </Button>
           </TabPanel>
-          <TabPanel>dssd</TabPanel>
+          <TabPanel>
+          {/* {location} */}
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>
