@@ -45,11 +45,13 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
       padding={3}
       width={"60%"}
       minW={"60%"}
-      boxShadow={"sm"}
+      // boxShadow={"sm"}
       borderRadius={"2xl"}
       bg={"white"}
       position={"relative"}
       overflow={"hidden"}
+      border={'1px'}
+      borderColor={'gray.200'}
     >
       <VStack gap={2} justify={"start"} alignItems={"start"}>
         <Skeleton borderRadius={"xl"} isLoaded={!loading}>
@@ -77,7 +79,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
           <Box alignSelf={"start"} textAlign={"left"} alignItems={"center"}>
             <Box>
               <Text
-                color={"grey"}
+                color={"gray.400"}
                 display={"flex"}
                 alignItems={"center"}
                 fontSize={"sm"}
@@ -85,14 +87,14 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
               >
                 <Box color={"#71B9BE"} mr={1}>
                   <AiOutlineFire />
-                </Box>
+                </Box >
                 {`
               ${calories}`}{" "}
                 calories <Box>&bull;</Box>{" "}
                 <Box color={"#71B9BE"} ml={1} mr={1}>
                   <IoIosNutrition />
                 </Box>
-                <Box>{`${carbs} carbs`}</Box>
+                <Box color={'gray.400'}>{`${carbs} carbs`}</Box>
               </Text>
             </Box>
           </Box>

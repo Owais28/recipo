@@ -84,7 +84,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
                   mr={2}
                   src="https://bit.ly/dan-abramov"
                 />
-                <Text fontSize={"14px"} fontFamily={"Noto Sans"} color={"grey"}>
+                <Text fontSize={"14px"} fontFamily={"Noto Sans"} color={"gray.400"}>
                   James Spader
                 </Text>
               </WrapItem>
