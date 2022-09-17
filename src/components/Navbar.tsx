@@ -60,7 +60,7 @@ export const Navbar = ({ person = "Stranger" }) => {
         </WrapItem>
         <WrapItem>
           {/* <SkeletonCircle isLoaded={!loading} /> */}
-          <Popover>
+          <Popover isLazy={true}>
             <PopoverTrigger>
               <Avatar
                 size={"md"}
@@ -69,7 +69,7 @@ export const Navbar = ({ person = "Stranger" }) => {
                 src="https://bit.ly/dan-abramov"
               />
             </PopoverTrigger>
-            <PopoverContent>
+            <PopoverContent outline={'none'}>
               <PopoverArrow />
               <PopoverCloseButton />
               <PopoverHeader>Confirmation</PopoverHeader>
