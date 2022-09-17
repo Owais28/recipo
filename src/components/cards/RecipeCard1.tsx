@@ -58,7 +58,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
             objectFit={"cover"}
             boxSize={"100%"}
             src={imgURL}
-            shadow={"base"}
+            boxShadow={"lg"}
           />
         </Skeleton>
         <SkeletonText mt="4" noOfLines={3} spacing="4" isLoaded={!loading}>

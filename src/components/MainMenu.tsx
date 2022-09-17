@@ -29,6 +29,7 @@ export const MainMenu = () => {
               }}
               variant="ghost"
               borderRadius={0}
+              // boxShadow={'xl'}
             >
               <VStack spacing={0}>
                 <HiHome fontSize={20} />
