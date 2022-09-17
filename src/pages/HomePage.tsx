@@ -7,6 +7,10 @@ import { SpaceComponent } from "../components/SpaceComponent";
 
 export const HomePage = () => {
   document.title = "Recipo | Home";
+  function reqFullScr(){
+    document.querySelector('body')?.requestFullscreen().then(()=> null)
+  }
+  reqFullScr();
 
   return (
     <Box
