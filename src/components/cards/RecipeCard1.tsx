@@ -82,7 +82,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
                 color={"gray.400"}
                 display={"flex"}
                 alignItems={"center"}
-                fontSize={"sm"}
+                fontSize={"xs"}
                 textAlign={"start"}
               >
                 <Box color={"#71B9BE"} mr={1}>
@@ -90,7 +90,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
                 </Box >
                 {`
               ${calories}`}{" "}
-                calories <Box>&bull;</Box>{" "}
+                calories <Box ml={1}>{" "} &bull;</Box>{" "}
                 <Box color={"#71B9BE"} ml={1} mr={1}>
                   <IoIosNutrition />
                 </Box>
