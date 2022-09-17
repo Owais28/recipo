@@ -13,8 +13,7 @@ export const HomePage = () => {
       maxW={'md'}
     //   width={'sm'}
       minH={"100vh"}
-      bg="#ffffff"
-      bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
+      bg={"green.50"}
       fontFamily={"Rubik"}
       p={3}
     >
