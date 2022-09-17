@@ -38,7 +38,9 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
       minWidth={'98%'}
     //   maxW={}
       height={"122px"}
-      boxShadow={"md"}
+      // boxShadow={"md"}
+      border={'1px'}
+      borderColor={'gray.200'}
       bg={"white"}
       data-recipe-id={id}
     >
@@ -53,7 +55,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
               height={"100%"}
               objectFit={"cover"}
               boxShadow={"md"}
-              
+
               overflow={'hidden'}
             //   flex={1}
             mr={2}
