@@ -7,6 +7,14 @@ import {
   WrapItem,
   Image,
   SkeletonText,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody,
+  Button,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
@@ -39,10 +47,11 @@ export const Navbar = ({ person = "Stranger" }) => {
                 <Box mt={"-1"}>
                   <Text
                     fontSize={"smaller"}
-                    color={"#0C2628"}
+                    color={"gray.500"}
                     fontWeight={"normal"}
+                    fontFamily={"Rubik"}
                   >
-                    It's dinner time!
+                    What to cook today?
                   </Text>
                 </Box>
               </Box>
@@ -51,12 +60,30 @@ export const Navbar = ({ person = "Stranger" }) => {
         </WrapItem>
         <WrapItem>
           {/* <SkeletonCircle isLoaded={!loading} /> */}
-          <Avatar
+          <Popover>
+            <PopoverTrigger>
+              <Avatar
+                size={"md"}
+                name="Dan Abrahmov"
+                mr={2}
+                src="https://bit.ly/dan-abramov"
+              />
+            </PopoverTrigger>
+            <PopoverContent>
+              <PopoverArrow />
+              <PopoverCloseButton />
+              <PopoverHeader>Confirmation</PopoverHeader>
+              <PopoverBody>
+                Are you sure you want to have that milkshake?
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
+          {/* <Avatar
             size={"md"}
             name="Dan Abrahmov"
             mr={2}
             src="https://bit.ly/dan-abramov"
-          />
+          /> */}
           {/* </SkeletonCircle> */}
         </WrapItem>
       </Wrap>
