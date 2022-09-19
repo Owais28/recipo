@@ -13,13 +13,11 @@ import { AiOutlineFire } from "react-icons/ai";
 import { IoIosNutrition } from "react-icons/io";
 import { RecipeInfo } from "../Drawer/RecipeInfo";
 
-
-
 interface PopularRecipesCardInterface {
-  id: number ;
+  id: number;
   title: string;
   imgURL: string;
-  calories: number ;
+  calories: number;
   protein: string;
   fat: string;
   carbs: string;
@@ -50,8 +48,8 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
       bg={"white"}
       position={"relative"}
       overflow={"hidden"}
-      border={'1px'}
-      borderColor={'gray.200'}
+      border={"1px"}
+      borderColor={"gray.200"}
     >
       <VStack gap={2} justify={"start"} alignItems={"start"}>
         <Skeleton borderRadius={"xl"} isLoaded={!loading}>
@@ -87,14 +85,14 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
               >
                 <Box color={"#71B9BE"} mr={1}>
                   <AiOutlineFire />
-                </Box >
+                </Box>
                 {`
               ${calories}`}{" "}
-                calories <Box ml={1}>{" "} &bull;</Box>{" "}
+                calories <Box ml={1}> &bull;</Box>{" "}
                 <Box color={"#71B9BE"} ml={1} mr={1}>
                   <IoIosNutrition />
                 </Box>
-                <Box color={'gray.400'}>{`${carbs} carbs`}</Box>
+                <Box color={"gray.400"}>{`${carbs} carbs`}</Box>
               </Text>
             </Box>
           </Box>

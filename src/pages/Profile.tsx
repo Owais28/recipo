@@ -5,7 +5,7 @@ export const Profile = () => {
     document.title = "Recipo | Profile"
   return (
     <Box
-      width="100vw"
+    maxW={"md"}
       minH={"100vh"}
       bg="#ffffff"
       // bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}

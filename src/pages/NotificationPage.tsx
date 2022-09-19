@@ -6,7 +6,7 @@ export const NotificationPage = () => {
     document.title = "Recipo | Notifications"
   return (
     <Box
-      width="100vw"
+    maxW={"md"}
       minH={"100vh"}
       bg="gray.50"
       // bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}

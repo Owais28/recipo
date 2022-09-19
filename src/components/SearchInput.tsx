@@ -1,14 +1,19 @@
-import { Box, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Box, Button, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import React, { FC } from "react";
 import { FiSearch } from "react-icons/fi";
 
 interface searchPropsIterFace {
   value : string,
-  onChange : any
-
+  onChange : any,
+  props : any
 }
 
-export const SearchInput : FC<searchPropsIterFace> = ({value, onChange } : searchPropsIterFace) => {
+export const SearchInput = ({value, onChange, ...props } : any) => {
+
+  function handleSearch(event){
+    props.fetchRecipes(value)
+    // console.log(value)
+  }
   return (
     <Box position={'sticky'} zIndex={'20'} py={2} top='0' px={3} bg={'#fff'}>
       <InputGroup>
@@ -25,6 +30,13 @@ export const SearchInput : FC<searchPropsIterFace> = ({value, onChange } : searc
           value={value}
           onChange={onChange}
         />
+        {/* <InputLeftElement
+          pointerEvents="none"
+          children={<FiSearch color="teal.200" />}
+        /> */}
+        <Button colorScheme='teal' variant='solid' onClick={handleSearch}>
+          Search
+        </Button>
       </InputGroup>
     </Box>
   );
