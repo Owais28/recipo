@@ -1,8 +1,14 @@
 import { Box, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import React from "react";
+import React, { FC } from "react";
 import { FiSearch } from "react-icons/fi";
 
-export const SearchInput = () => {
+interface searchPropsIterFace {
+  value : string,
+  onChange : any
+
+}
+
+export const SearchInput : FC<searchPropsIterFace> = ({value, onChange } : searchPropsIterFace) => {
   return (
     <Box position={'sticky'} zIndex={'20'} py={2} top='0' px={3} bg={'#fff'}>
       <InputGroup>
@@ -16,6 +22,8 @@ export const SearchInput = () => {
           outline={"#fff"}
           fontSize={"sm"}
           fontFamily="Rubik"
+          value={value}
+          onChange={onChange}
         />
       </InputGroup>
     </Box>

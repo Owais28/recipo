@@ -2,11 +2,13 @@ import { Box, Heading, HStack, Input, VStack,
     // Wrap, 
     // WrapItem
  } from "@chakra-ui/react";
+import { connect } from "react-redux";
 import { RecipeCardHorizontal } from "../components/cards/RecipeCardHorizontal";
 import { SearchInput } from "../components/SearchInput";
+import { SearcRecipe } from "../redux/rootStore";
 // import { useNavigate } from "react-router-dom";
 
-export const SearchPage = () => {
+const SearchPage = ({ searchRecipe , ...props} : any) => {
   //   const navigate = useNavigate();
 
   document.title = "Recipo | Profile"
@@ -190,7 +192,7 @@ export const SearchPage = () => {
         </TabPanels>
       </Tabs> */}
       <VStack spacing={3} bg={'#fff'} align='stretch'>
-        <SearchInput/>
+        <SearchInput value={props.store.searchQuery} onChange={(event : any) => searchRecipe(event)} />
         <VStack px={3} py={2} pb={20} overflow={'scroll'} gap={1} align={'stretch'}>
             {
               recipiesByNutrients.map(
@@ -201,4 +203,12 @@ export const SearchPage = () => {
       </VStack>
     </Box>
   );
-};
+}
+
+function mapDispatchToProps(dispatch : any)  {
+  return {
+    searchRecipe : (event : any) => dispatch(SearcRecipe(event.target.value))
+  }
+}
+
+export default connect(null,mapDispatchToProps)(SearchPage);

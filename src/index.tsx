@@ -1,10 +1,12 @@
 import { ChakraProvider, ColorModeScript, theme } from "@chakra-ui/react";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { App } from "./App";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./redux/rootStore";
 // import { CompleteRecipe } from "./pages/CompleteRecipe";
 
 const container = document.getElementById("root");
@@ -12,18 +14,20 @@ if (!container) throw new Error("Failed to find the root element");
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <ChakraProvider theme={theme}>
+  <Provider store={store}>
+    <ChakraProvider theme={theme}>
       <React.StrictMode>
-    <BrowserRouter>
-        <ColorModeScript />
-        {/* <Routes>
+        <BrowserRouter>
+          <ColorModeScript />
+          {/* <Routes>
           <Route path="/" element={<App />} />
           <Route path="completeRecipe" element={<CompleteRecipe />} />
         </Routes> */}
-        <App />
-    </BrowserRouter>
+          <App />
+        </BrowserRouter>
       </React.StrictMode>
-  </ChakraProvider>
+    </ChakraProvider>
+  </Provider>
 );
 
 // If you want your app to work offline and load faster, you can change

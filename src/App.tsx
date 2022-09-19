@@ -4,9 +4,13 @@ import { CompleteRecipe } from "./pages/CompleteRecipe";
 import { HomePage } from "./pages/HomePage";
 import "./index.css";
 import { Profile } from "./pages/Profile";
-import { SearchPage } from "./pages/SearchPage";
+import SearchPage  from "./pages/SearchPage";
 import { NotificationPage } from "./pages/NotificationPage";
-import { Box } from "@chakra-ui/react";
+
+import { store } from "./redux/rootStore";
+import { buyCake } from "./redux/cakeAction";
+import { connect } from "react-redux";
+// import { Box } from "@chakra-ui/react";
 // import {
 //   Button,
 //   Modal,
@@ -19,15 +23,15 @@ import { Box } from "@chakra-ui/react";
 //   useDisclosure,
 // } from "@chakra-ui/react";
 
-export const App = () => {
-
+const App = (props : any) => {
+  console.log(props.state)
   // const {}
-  
+
   return (
     <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="search" element={<SearchPage />} />
+        <Route path="search" element={<SearchPage store={props.store} />} />
         <Route path="notification" element={<NotificationPage />} />
         <Route path="/completeRecipe" element={<CompleteRecipe />} />
         <Route path="user" element={<Profile />} />
@@ -35,4 +39,12 @@ export const App = () => {
       <MainMenu />
     </div>
   );
-};
+}
+
+const mapStateToProps = (store : any ) => {
+  return {
+    store : store
+  }
+}
+
+export default connect(mapStateToProps)(App);
