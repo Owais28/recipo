@@ -34,7 +34,7 @@ export const SearchInput = ({value, onChange, ...props } : any) => {
           pointerEvents="none"
           children={<FiSearch color="teal.200" />}
         /> */}
-        <Button colorScheme='teal' variant='solid' onClick={handleSearch}>
+        <Button colorScheme='teal' fontSize={'sm'} ml={'4'} fontWeight={'regular'} variant='solid' onClick={handleSearch}>
           Search
         </Button>
       </InputGroup>
