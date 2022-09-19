@@ -8,18 +8,21 @@ import {
   // Wrap,
   // WrapItem
 } from "@chakra-ui/react";
-import { BiArrowBack } from "react-icons/bi";
 import { connect } from "react-redux";
+// import { BiArrowBack } from "react-icons/bi";
+// import { connect } from "react-redux";
 import { RecipeCardHorizontal } from "../components/cards/RecipeCardHorizontal";
 import { SearchInput } from "../components/SearchInput";
 import { SearchRecipe } from "../redux/clientActions";
 import { fetchRecipes } from "../redux/serverActions";
+// import { SearchRecipe } from "../redux/clientActions";
+// import { fetchRecipes } from "../redux/serverActions";
 // import { fetchRecipes, SearcRecipe } from "../redux/rootStore";
 // import { useNavigate } from "react-router-dom";
 
-const SearchPage = ({ searchRecipe, ...props }: any) => {
+const SearchPage = ( props: any) => {
   document.title = "Recipo | Profile";
-  // console.log(props.state.searchResults)
+  console.log(props)
   // const recipiesByNutrients = [
   //   {
   //     id: 634141,
@@ -201,7 +204,7 @@ const SearchPage = ({ searchRecipe, ...props }: any) => {
       <VStack spacing={3} bg={"gray.50"} align="stretch">
         <SearchInput
           value={props.store.searchQuery}
-          onChange={(event: any) => searchRecipe(event)}
+          onChange={(event: any) => props.searchRecipe(event)}
           fetchRecipes={props.fetchRecipes}
         />
         <VStack
@@ -213,7 +216,7 @@ const SearchPage = ({ searchRecipe, ...props }: any) => {
           align={"stretch"}
           minH={'100vh'}
         >
-          {!props.loading && props.state.searchResults.map((recipe) => (
+          {!props.loading && props.store.searchResults.map((recipe) => (
             <RecipeCardHorizontal
               id={recipe.id}
               title={recipe.title}
@@ -233,16 +236,18 @@ function mapDispatchToProps(dispatch: any) {
   };
 }
 
-function mapStateToProps(state : any) {
-  return {
-    searchedRecipes : state.searchResults,
-    loading : state.isLoading,
-    state : state
-  }
-}
+// function mapStateToProps(state : any) {
+//   return {
+//     searchedRecipes : state.searchResults,
+//     loading : state.isLoading,
+//     state : state
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
+export default connect(null, mapDispatchToProps)(SearchPage);
 // function SearcRecipe(value: any): any {
 //   throw new Error("Function not implemented.");
 // }
+
+// export default SearchPage
 

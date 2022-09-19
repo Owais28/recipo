@@ -9,7 +9,7 @@ import { NotificationPage } from "./pages/NotificationPage";
 import { connect } from "react-redux";
 
 const App = (props : any) => {
-  // console.log(props.store)
+  console.log(props.store)
 
   return (
     <div>
@@ -30,5 +30,11 @@ const mapStateToProps = (store : any ) => {
     store : store
   }
 }
+
+// const mapDispatchToProps = (dispatch : any) => {
+//   return {
+//     dispatch : ()
+//   }
+// }
 
 export default connect(mapStateToProps)(App);

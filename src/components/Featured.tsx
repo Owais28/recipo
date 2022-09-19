@@ -1,4 +1,4 @@
-import { Box, Text, Flex, WrapItem, Avatar, Skeleton } from "@chakra-ui/react";
+import { Box, Text, Flex, Skeleton } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { FeaturedCard } from "./cards/FeaturedCard";
 
@@ -6,6 +6,7 @@ export const Featured = () => {
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => setLoading(false), 3000);
+  
   const arrayPseudo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <Box maxW="md" overflow="hidden">
