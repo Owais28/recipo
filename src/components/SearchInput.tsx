@@ -39,7 +39,7 @@ export const SearchInput = ({ value, onChange, ...props }: any) => {
           pointerEvents="none"
           children={<FiSearch color="teal.200" />}
         /> */}
-        <Button
+        {/* <Button
           colorScheme="teal"
           fontSize={"sm"}
           ml={"4"}
@@ -48,7 +48,7 @@ export const SearchInput = ({ value, onChange, ...props }: any) => {
           onClick={handleSearch}
         >
           Search
-        </Button>
+        </Button> */}
       </InputGroup>
     </Box>
   );

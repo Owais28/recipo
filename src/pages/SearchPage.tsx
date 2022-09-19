@@ -22,7 +22,7 @@ import { fetchRecipes } from "../redux/serverActions";
 
 const SearchPage = ( props: any) => {
   document.title = "Recipo | Profile";
-  console.log(props)
+  // console.log(props)
   // const recipiesByNutrients = [
   //   {
   //     id: 634141,
@@ -150,7 +150,7 @@ const SearchPage = ( props: any) => {
           fontFamily={"Rubik"}
           fontWeight={"medium"}
         >
-          Search Recipe
+          Search
         </Heading>
       </HStack>
       {/* <Tabs isLazy={true} width={"100%"} isFitted={true}>
