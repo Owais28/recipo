@@ -1,17 +1,24 @@
-import { Box, Heading, HStack, Input, VStack, 
-    // Wrap, 
-    // WrapItem
- } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  HStack,
+  Input,
+  VStack,
+  WrapItem,
+  // Wrap,
+  // WrapItem
+} from "@chakra-ui/react";
+import { BiArrowBack } from "react-icons/bi";
 import { connect } from "react-redux";
 import { RecipeCardHorizontal } from "../components/cards/RecipeCardHorizontal";
 import { SearchInput } from "../components/SearchInput";
 import { SearcRecipe } from "../redux/rootStore";
 // import { useNavigate } from "react-router-dom";
 
-const SearchPage = ({ searchRecipe , ...props} : any) => {
-  //   const navigate = useNavigate();
+const SearchPage = ({ searchRecipe, ...props }: any) => {
+  // const navigate = useNavigate();
 
-  document.title = "Recipo | Profile"
+  document.title = "Recipo | Profile";
 
   const recipiesByNutrients = [
     {
@@ -125,9 +132,9 @@ const SearchPage = ({ searchRecipe , ...props} : any) => {
       fontFamily={"Rubik"}
       // p={3}
       fontSize={"sm"}
-      position='relative'
+      position="relative"
     >
-      <HStack width={"100%"} py={4} justify={"space-between"} align={"stretch"}>
+      <HStack width={"100%"} pt={4} justify={"space-between"} align={"stretch"}>
         {/* <WrapItem onClick={
           () => navigate(-1)
         } flex={1} p={2}>
@@ -191,24 +198,36 @@ const SearchPage = ({ searchRecipe , ...props} : any) => {
           <TabPanel>dssd</TabPanel>
         </TabPanels>
       </Tabs> */}
-      <VStack spacing={3} bg={'#fff'} align='stretch'>
-        <SearchInput value={props.store.searchQuery} onChange={(event : any) => searchRecipe(event)} />
-        <VStack px={3} py={2} pb={20} overflow={'scroll'} gap={1} align={'stretch'}>
-            {
-              recipiesByNutrients.map(
-                  (recipe) => <RecipeCardHorizontal id={recipe.id} title={recipe.title} imgURL={recipe.image}/>
-              )
-          }
+      <VStack spacing={3} bg={"gray.50"} align="stretch">
+        <SearchInput
+          value={props.store.searchQuery}
+          onChange={(event: any) => searchRecipe(event)}
+        />
+        <VStack
+          px={3}
+          py={2}
+          pb={20}
+          overflow={"scroll"}
+          gap={1}
+          align={"stretch"}
+        >
+          {recipiesByNutrients.map((recipe) => (
+            <RecipeCardHorizontal
+              id={recipe.id}
+              title={recipe.title}
+              imgURL={recipe.image}
+            />
+          ))}
         </VStack>
       </VStack>
     </Box>
   );
-}
+};
 
-function mapDispatchToProps(dispatch : any)  {
+function mapDispatchToProps(dispatch: any) {
   return {
-    searchRecipe : (event : any) => dispatch(SearcRecipe(event.target.value))
-  }
+    searchRecipe: (event: any) => dispatch(SearcRecipe(event.target.value)),
+  };
 }
 
-export default connect(null,mapDispatchToProps)(SearchPage);
+export default connect(null, mapDispatchToProps)(SearchPage);

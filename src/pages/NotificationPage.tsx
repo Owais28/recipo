@@ -8,7 +8,7 @@ export const NotificationPage = () => {
     <Box
       width="100vw"
       minH={"100vh"}
-      bg="#ffffff"
+      bg="gray.50"
       // bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
       fontFamily={"Rubik"}
       p={3}

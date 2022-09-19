@@ -13,8 +13,8 @@ export const HomePage = memo(() => {
       maxW={"md"}
       //   width={'sm'}
       minH={"100vh"}
-      // bg={"teal.50"}
-      bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
+      bg={"gray.50"}
+      // bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
       fontFamily={"Rubik"}
       p={3}
     >

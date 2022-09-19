@@ -25,7 +25,23 @@ export const SearcRecipe = (recipe: string) => {
 
 const cakeStore = {
   numOfCakes: 10,
-  searchQuery: "ddd",
+  searchQuery: "",
+  // notification: {
+  //   unread: 0,
+  //   archiveMessages: [
+  //     {
+  //       time: "",
+  //       link : '',
+  //       type : '',
+  //       body : 
+  //     },
+  //   ],
+  //   messages: [
+  //     {
+  //       time: "",
+  //     },
+  //   ],
+  // },
 };
 
 const cakeReducer = (store: any = cakeStore, action: any) => {
