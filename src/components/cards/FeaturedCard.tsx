@@ -1,5 +1,4 @@
 import { Box, Skeleton, WrapItem, Text, Avatar } from "@chakra-ui/react";
-import React from "react";
 
 export const FeaturedCard = (props: { loading: any }) => {
   return (

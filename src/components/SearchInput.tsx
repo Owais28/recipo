@@ -11,8 +11,8 @@ interface searchPropsIterFace {
 export const SearchInput = ({value, onChange, ...props } : any) => {
 
   function handleSearch(event){
-    props.fetchRecipes(value)
-    // console.log(value)
+    if(event.key === "Enter") props.fetchRecipes(value)
+    // console.log(event.key)
   }
   return (
     <Box position={'sticky'} zIndex={'20'} py={2} top='0' px={3} bg={'#fff'}>
@@ -29,6 +29,7 @@ export const SearchInput = ({value, onChange, ...props } : any) => {
           fontFamily="Rubik"
           value={value}
           onChange={onChange}
+          onKeyUp={handleSearch}
         />
         {/* <InputLeftElement
           pointerEvents="none"

@@ -38,8 +38,8 @@ export const Featured = () => {
           wrap={"nowrap"}
           height={"230px"}
         >
-          {arrayPseudo.map(() => (
-            <FeaturedCard loading={loading} />
+          {arrayPseudo.map((item, index) => (
+            <FeaturedCard loading={loading} key={index} />
           ))}
         </Flex>
       </Box>

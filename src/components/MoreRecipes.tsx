@@ -137,7 +137,7 @@ export const MoreRecipes = () => {
       <VStack gap={1} py={3} align={'stretch'} w={'100%'}>
         {
             recipiesByNutrients.map(
-                (recipe) => <RecipeCardHorizontal id={recipe.id} title={recipe.title} imgURL={recipe.image}/>
+                (recipe) => <RecipeCardHorizontal id={recipe.id} title={recipe.title} key={recipe.title} imgURL={recipe.image}/>
             )
         }
       </VStack>

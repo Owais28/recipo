@@ -12,14 +12,14 @@ import { BiArrowBack } from "react-icons/bi";
 import { connect } from "react-redux";
 import { RecipeCardHorizontal } from "../components/cards/RecipeCardHorizontal";
 import { SearchInput } from "../components/SearchInput";
-import { fetchRecipes, SearcRecipe } from "../redux/rootStore";
+import { SearchRecipe } from "../redux/clientActions";
+import { fetchRecipes } from "../redux/serverActions";
+// import { fetchRecipes, SearcRecipe } from "../redux/rootStore";
 // import { useNavigate } from "react-router-dom";
 
 const SearchPage = ({ searchRecipe, ...props }: any) => {
-  // const navigate = useNavigate();
-  // console.log(props.searchedRecipes)
   document.title = "Recipo | Profile";
-  console.log(props.state.searchResults)
+  // console.log(props.state.searchResults)
   // const recipiesByNutrients = [
   //   {
   //     id: 634141,
@@ -211,6 +211,7 @@ const SearchPage = ({ searchRecipe, ...props }: any) => {
           overflow={"scroll"}
           gap={1}
           align={"stretch"}
+          minH={'100vh'}
         >
           {!props.loading && props.state.searchResults.map((recipe) => (
             <RecipeCardHorizontal
@@ -227,7 +228,7 @@ const SearchPage = ({ searchRecipe, ...props }: any) => {
 
 function mapDispatchToProps(dispatch: any) {
   return {
-    searchRecipe: (event: any) => dispatch(SearcRecipe(event.target.value)),
+    searchRecipe: (event: any) => dispatch(SearchRecipe(event.target.value)),
     fetchRecipes : (recipe : string) => dispatch(fetchRecipes(recipe))
   };
 }
@@ -241,3 +242,7 @@ function mapStateToProps(state : any) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
+// function SearcRecipe(value: any): any {
+//   throw new Error("Function not implemented.");
+// }
+
