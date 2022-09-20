@@ -9,7 +9,7 @@ import { NotificationPage } from "./pages/NotificationPage";
 import { connect } from "react-redux";
 
 const App = (props : any) => {
-  console.log(props.store)
+  // console.log(props.store)
 
   return (
     <div>

@@ -216,11 +216,12 @@ const SearchPage = ( props: any) => {
           align={"stretch"}
           minH={'100vh'}
         >
-          {!props.loading && props.store.searchResults.map((recipe) => (
+          {!props.loading && props.store.searchResults.map((recipe, index) => (
             <RecipeCardHorizontal
               id={recipe.id}
               title={recipe.title}
               imgURL={recipe.image}
+              key={index}
             />
           ))}
         </VStack>
