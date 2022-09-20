@@ -43,7 +43,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
       padding={2}
       width={"60%"}
       minW={"60%"}
-      // boxShadow={"xs"}
+      // boxShadow={"ls"}
       borderRadius={"2xl"}
       bg={"white"}
       position={"relative"}
@@ -51,7 +51,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
       border={"1px"}
       borderColor={"gray.200"}
     >
-      <VStack gap={2} justify={"start"} alignItems={"start"}>
+      <VStack gap={2} height={'100%'} justify={"start"} alignItems={"start"}>
         <Skeleton borderRadius={"xl"} isLoaded={!loading}>
           <Image
             borderRadius={"xl"}
@@ -70,11 +70,11 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
             height={"53px"}
             overflow={"hidden"}
           >
-            {title.length < 40 ? title : title.slice(0, 37) + "..."}
+            {title.length < 20 ? title : title.slice(0, 20) + "..."}
           </Text>
         </SkeletonText>
         <SkeletonText mt="4" noOfLines={1} spacing="4" isLoaded={!loading}>
-          <Box alignSelf={"start"} textAlign={"left"} alignItems={"center"}>
+          <Box alignSelf={"start"} flex={1} textAlign={"left"} alignItems={"center"}>
             <Box>
               <Text
                 color={"gray.400"}

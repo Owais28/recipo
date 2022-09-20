@@ -105,7 +105,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
                 },
               }}
             >
-              <Box bg={"#0C2628"} borderRadius='lg' p={0.5} boxShadow={"base"}>
+              {/* <Box bg={"#0C2628"} borderRadius='lg' p={0.5} boxShadow={"base"}>
                 <Link
                   color="teal.500"
                   bg={"teal.50"}
@@ -115,7 +115,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
                 >
                   <BsArrowRightShort color="white" fontSize={"30px"} />
                 </Link>
-              </Box>
+              </Box> */}
             </RouterLink>
             {/* </Button> */}
           </Box>
