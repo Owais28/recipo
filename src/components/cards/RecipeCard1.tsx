@@ -40,7 +40,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
     <Box
       onClick={onOpen}
       data-recipe-id={id}
-      padding={3}
+      padding={2}
       width={"60%"}
       minW={"60%"}
       // boxShadow={"xs"}
@@ -54,7 +54,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
       <VStack gap={2} justify={"start"} alignItems={"start"}>
         <Skeleton borderRadius={"xl"} isLoaded={!loading}>
           <Image
-            borderRadius={"2xl"}
+            borderRadius={"xl"}
             objectFit={"cover"}
             boxSize={"100%"}
             src={imgURL}

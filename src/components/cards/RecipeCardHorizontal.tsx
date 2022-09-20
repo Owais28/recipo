@@ -49,7 +49,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
           <Box display={"flex"}>
             {/* <Skeleton isLoaded/> */}
             <Image
-              borderRadius={"xl"}
+              borderRadius={"lg"}
               src={imgURL}
               minWidth={"100px"}
               width={"100px"}
@@ -105,7 +105,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
                 },
               }}
             >
-              <Box bg={"#0C2628"} borderRadius="lg" p={0.5} boxShadow={"base"}>
+              <Box bg={"#0C2628"} borderRadius='lg' p={0.5} boxShadow={"base"}>
                 <Link
                   color="teal.500"
                   bg={"teal.50"}
