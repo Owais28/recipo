@@ -1,8 +1,13 @@
-import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Button, Link, Skeleton, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import { Flexbox } from "./wrapper/Flexbox";
 
 export const Categories = () => {
+
+  const [loading, setLoading] = useState(true);
+
+  setTimeout(() => setLoading(false), 3000);
+
   return (
     <Box maxW={"md"} my={3}>
       <Text
@@ -29,9 +34,7 @@ export const Categories = () => {
 
       <Box width="100%">
         <Flexbox height={"auto"}>
-          {/* {recipiesByNutrients.map((recipe) => (
-                <RecipeCard1 title={recipe.title} imgURL={recipe.image} calories={recipe.calories} carbs={recipe.carbs} protein={recipe.protein} fat={recipe.fat} id={recipe.id} key={recipe.id}   />
-              ))} */}
+          <Skeleton borderRadius={"full"} isLoaded={!loading}> 
           <Button
             colorScheme="teal"
             flexShrink={0}
@@ -43,6 +46,8 @@ export const Categories = () => {
           >
             Breakfast
           </Button>
+          </Skeleton>
+          <Skeleton borderRadius={"full"} isLoaded={!loading}> 
           <Button
             colorScheme="gray"
             flexShrink={0}
@@ -53,6 +58,9 @@ export const Categories = () => {
           >
             Lunch
           </Button>
+          </Skeleton>
+
+          <Skeleton borderRadius={"full"} isLoaded={!loading}> 
           <Button
             colorScheme="gray"
             flexShrink={0}
@@ -63,6 +71,9 @@ export const Categories = () => {
           >
             Dinner
           </Button>
+          </Skeleton>
+
+          <Skeleton borderRadius={"full"} isLoaded={!loading}> 
           <Button
             colorScheme="gray"
             flexShrink={0}
@@ -73,6 +84,8 @@ export const Categories = () => {
           >
             Meal
           </Button>
+          </Skeleton>
+          
         </Flexbox>
       </Box>
     </Box>
