@@ -17,8 +17,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export const CompleteRecipe = () => {
   const location = useLocation();
-  const recipeID = location
-  console.log(location)
+  const recipeID = location;
+  console.log(location);
 
   const navigate = useNavigate();
 
@@ -94,9 +94,7 @@ export const CompleteRecipe = () => {
               Load Ingredients
             </Button>
           </TabPanel>
-          <TabPanel>
-          {/* {location} */}
-          </TabPanel>
+          <TabPanel>{/* {location} */}</TabPanel>
         </TabPanels>
       </Tabs>
     </Box>

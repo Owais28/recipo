@@ -4,7 +4,7 @@ import { Flexbox } from './wrapper/Flexbox'
 
 export const Categories = () => {
   return (
-    <Box maxW={"md"} my={3}>
+    <Box maxW={"md"} pl={3} my={3}>
       <Text
         display={"flex"}
         alignItems={"center"}
@@ -13,6 +13,7 @@ export const Categories = () => {
         fontFamily={"Rubik"}
         color="#0C2628"
         fontWeight={"semibold"}
+        mr={3}
       >
         Category{" "}
         <Link
@@ -30,10 +31,10 @@ export const Categories = () => {
               {/* {recipiesByNutrients.map((recipe) => (
                 <RecipeCard1 title={recipe.title} imgURL={recipe.image} calories={recipe.calories} carbs={recipe.carbs} protein={recipe.protein} fat={recipe.fat} id={recipe.id} key={recipe.id}   />
               ))} */}
-              <Button colorScheme='teal' flexShrink={0}  width={'max-content'} borderRadius={'full'} fontSize={'smaller'} fontWeight={'normal'}>Breakfast</Button>
-              <Button colorScheme='gray' flexShrink={0}  borderRadius={'full'} fontSize={'smaller'} fontWeight={'normal'}>Lunch</Button>
-              <Button colorScheme='gray' flexShrink={0}  borderRadius={'full'} fontSize={'smaller'} fontWeight={'normal'}>Dinner</Button>
-              <Button colorScheme='gray' flexShrink={0} borderRadius={'full'} fontSize={'smaller'} fontWeight={'normal'}>Meal</Button>
+              <Button colorScheme='teal' flexShrink={0}  width={'max-content'} borderRadius={'full'} px={6} fontSize={'smaller'} fontWeight={'normal'}>Breakfast</Button>
+              <Button colorScheme='gray' flexShrink={0}  borderRadius={'full'} fontSize={'smaller'} px={6} fontWeight={'normal'}>Lunch</Button>
+              <Button colorScheme='gray' flexShrink={0}  borderRadius={'full'} fontSize={'smaller'} px={6} fontWeight={'normal'}>Dinner</Button>
+              <Button colorScheme='gray' flexShrink={0} borderRadius={'full'} fontSize={'smaller'} px={6} fontWeight={'normal'}>Meal</Button>
         </Flexbox>
       </Box>
       

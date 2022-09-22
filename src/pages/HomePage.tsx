@@ -18,7 +18,7 @@ export const HomePage = memo(() => {
       // bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
       fontFamily={"Rubik"}
       overflow="hidden"
-      p={3}
+      // p={3}
     >
       <Navbar person={"Stranger"} />
       <Featured />

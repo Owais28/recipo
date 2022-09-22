@@ -14,7 +14,6 @@ import {
   PopoverCloseButton,
   PopoverHeader,
   PopoverBody,
-  Button,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
@@ -24,7 +23,7 @@ export const Navbar = ({ person = "Stranger" }) => {
   setTimeout(() => setLoading(false), 3000);
 
   return (
-    <Box maxW={"100%"}>
+    <Box maxW={"100%"} p={3}>
       <Wrap justify={"space-between"} py={"2"} mb={3} align={"center"}>
         <WrapItem flex={1}>
           <SkeletonText noOfLines={2} isLoaded={!loading}>

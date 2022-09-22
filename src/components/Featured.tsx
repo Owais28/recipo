@@ -11,7 +11,7 @@ export const Featured = () => {
 
   const arrayPseudo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <Box maxW="md" overflow="hidden">
+    <Box maxW="md" pl={3} overflow="hidden">
       <Text1>Featured</Text1>
       <Box width="100%">
         <Flexbox height={'230px'}>

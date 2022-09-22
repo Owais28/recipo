@@ -109,7 +109,7 @@ export const PopularRecipies = () => {
   ];
 
   return (
-    <Box maxW={"md"} my={3}>
+    <Box maxW={"md"} my={3} pl={3}>
       <Text
         display={"flex"}
         alignItems={"center"}
@@ -118,6 +118,7 @@ export const PopularRecipies = () => {
         fontFamily={"Rubik"}
         color="#0C2628"
         fontWeight={"semibold"}
+        mr={3}
       >
         Popular Recipes{" "}
         <Link
