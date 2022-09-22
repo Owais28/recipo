@@ -4,11 +4,12 @@ import { CompleteRecipe } from "./pages/CompleteRecipe";
 import { HomePage } from "./pages/HomePage";
 import "./index.css";
 import { Profile } from "./pages/Profile";
-import SearchPage  from "./pages/SearchPage";
+import SearchPage from "./pages/SearchPage";
 import { NotificationPage } from "./pages/NotificationPage";
 import { connect } from "react-redux";
+import { ColorModeProvider } from "@chakra-ui/react";
 
-const App = (props : any) => {
+const App = (props: any) => {
   // console.log(props.store)
 
   return (
@@ -23,13 +24,13 @@ const App = (props : any) => {
       <MainMenu />
     </div>
   );
-}
+};
 
-const mapStateToProps = (store : any ) => {
+const mapStateToProps = (store: any) => {
   return {
-    store : store
-  }
-}
+    store: store,
+  };
+};
 
 // const mapDispatchToProps = (dispatch : any) => {
 //   return {

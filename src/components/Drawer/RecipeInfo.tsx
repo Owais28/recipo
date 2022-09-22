@@ -1,6 +1,8 @@
 import {
   Box,
   Button,
+  ColorModeScript,
+  DarkMode,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -9,6 +11,7 @@ import {
   Grid,
   GridItem,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import { AiOutlineFire } from "react-icons/ai";
@@ -34,9 +37,11 @@ interface RecipeInfoInterface {
 }
 export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
   //   const { isOpen, onOpen, onClose } = useDisclosure();
-//   const [loading, setLoading] = useState(true);
+  //   const [loading, setLoading] = useState(true);
 
-//   setTimeout(() => setLoading(false), 3000);
+  //   setTimeout(() => setLoading(false), 3000);
+
+  const {colorMode, toggleColorMode} = useColorMode()
 
   return (
     <Drawer
@@ -212,10 +217,19 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
               /> */}
             {/* </Box> */}
             {/* Ingredients Section */}
-            <Button variant={"solid"} width={'100%'} colorScheme={'teal'} fontFamily={'Rubik'} fontWeight={'normal'} mb={3}>
-              Complete Recipe {' '} <Box ml={1}>
-                <BsArrowRightShort fontSize={25}/>
-                </Box>
+            <Button
+              variant={"solid"}
+              width={"100%"}
+              colorScheme={"teal"}
+              fontFamily={"Rubik"}
+              fontWeight={"normal"}
+              mb={3}
+            >
+              Complete Recipe{" "}
+              <ColorModeScript initialColorMode="dark"/>
+              <Box ml={1} onClick={(event) => toggleColorMode()}>
+                <BsArrowRightShort fontSize={25} />
+              </Box>
             </Button>
           </Box>
         </DrawerBody>
