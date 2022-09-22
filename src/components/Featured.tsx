@@ -11,8 +11,10 @@ export const Featured = () => {
 
   const arrayPseudo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <Box maxW="md" pl={3} overflow="hidden">
+    <Box maxW="md" overflow="hidden">
+      <Box pl={3}>
       <Text1>Featured</Text1>
+      </Box>
       <Box width="100%">
         <Flexbox height={'230px'}>
           {arrayPseudo.map((item, index) => (

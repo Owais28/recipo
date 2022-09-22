@@ -1,10 +1,8 @@
-import { Box, Flex, Link, Text} from "@chakra-ui/react";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 import { RecipeCard1 } from "./cards/RecipeCard1";
-
-
+import { Flexbox } from "./wrapper/Flexbox";
 
 export const PopularRecipies = () => {
-
   const recipiesByNutrients = [
     {
       id: 634141,
@@ -109,7 +107,7 @@ export const PopularRecipies = () => {
   ];
 
   return (
-    <Box maxW={"md"} my={3} pl={3}>
+    <Box maxW={"md"} my={3}>
       <Text
         display={"flex"}
         alignItems={"center"}
@@ -119,6 +117,7 @@ export const PopularRecipies = () => {
         color="#0C2628"
         fontWeight={"semibold"}
         mr={3}
+        pl={3}
       >
         Popular Recipes{" "}
         <Link
@@ -132,32 +131,21 @@ export const PopularRecipies = () => {
       </Text>
 
       <Box width="100%">
-        <Flex
-          py={2}
-          gap={4}
-          css={{
-            "&::-webkit-scrollbar": {
-              width: "1px",
-              height: "0px",
-            },
-            "&::-webkit-scrollbar-track": {
-              width: "2px",
-            },
-            "&::-webkit-scrollbar-thumb": {
-              background: "#8ccef0",
-              borderRadius: "24px",
-            },
-          }}
-          overflowX={"scroll"}
-          wrap={"nowrap"}
-          //   height={"230px"}
-        >
-              {recipiesByNutrients.map((recipe) => (
-                <RecipeCard1 title={recipe.title} imgURL={recipe.image} calories={recipe.calories} carbs={recipe.carbs} protein={recipe.protein} fat={recipe.fat} id={recipe.id} key={recipe.id}   />
-              ))}
-        </Flex>
+        <Flexbox height={"auto"}>
+          {recipiesByNutrients.map((recipe) => (
+            <RecipeCard1
+              title={recipe.title}
+              imgURL={recipe.image}
+              calories={recipe.calories}
+              carbs={recipe.carbs}
+              protein={recipe.protein}
+              fat={recipe.fat}
+              id={recipe.id}
+              key={recipe.id}
+            />
+          ))}
+        </Flexbox>
       </Box>
-      
     </Box>
   );
 };

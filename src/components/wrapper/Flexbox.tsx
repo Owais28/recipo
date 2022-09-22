@@ -5,6 +5,7 @@ export const Flexbox = ({ children, height }) => {
     <Flex
       py={2}
       gap={3}
+      pl={3} pr={3}
       css={{
         "&::-webkit-scrollbar": {
           width: "1px",
