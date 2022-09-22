@@ -11,7 +11,6 @@ import {
   Grid,
   GridItem,
   Text,
-  useColorMode,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import { AiOutlineFire } from "react-icons/ai";
@@ -41,7 +40,6 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
 
   //   setTimeout(() => setLoading(false), 3000);
 
-  const {colorMode, toggleColorMode} = useColorMode()
 
   return (
     <Drawer
@@ -226,8 +224,7 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
               mb={3}
             >
               Complete Recipe{" "}
-              <ColorModeScript initialColorMode="dark"/>
-              <Box ml={1} onClick={(event) => toggleColorMode()}>
+              <Box ml={1} >
                 <BsArrowRightShort fontSize={25} />
               </Box>
             </Button>

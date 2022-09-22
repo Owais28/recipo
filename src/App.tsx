@@ -7,7 +7,6 @@ import { Profile } from "./pages/Profile";
 import SearchPage from "./pages/SearchPage";
 import { NotificationPage } from "./pages/NotificationPage";
 import { connect } from "react-redux";
-import { ColorModeProvider } from "@chakra-ui/react";
 
 const App = (props: any) => {
   // console.log(props.store)
