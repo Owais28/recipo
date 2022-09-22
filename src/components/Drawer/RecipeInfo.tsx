@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -16,6 +17,7 @@ import { IoIosNutrition } from "react-icons/io";
 import { IoMdPizza } from "react-icons/io";
 import CheckCircleIcon from "@chakra-ui/icon";
 import { TiLeaf } from "react-icons/ti";
+import { BsArrowRightShort } from "react-icons/bs";
 // import { Link, Route, Routes } from "react-router-dom";
 // import { CompleteRecipe } from "../../routes/completeRecipe";
 
@@ -210,6 +212,11 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
               /> */}
             {/* </Box> */}
             {/* Ingredients Section */}
+            <Button variant={"solid"} width={'100%'} colorScheme={'teal'} fontFamily={'Rubik'} fontWeight={'normal'} mb={3}>
+              Complete Recipe {' '} <Box ml={1}>
+                <BsArrowRightShort fontSize={25}/>
+                </Box>
+            </Button>
           </Box>
         </DrawerBody>
       </DrawerContent>

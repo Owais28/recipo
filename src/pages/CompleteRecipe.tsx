@@ -17,7 +17,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export const CompleteRecipe = () => {
   const location = useLocation();
-  const recipeID = location;
+  // const recipeID = location;
   console.log(location);
 
   const navigate = useNavigate();
