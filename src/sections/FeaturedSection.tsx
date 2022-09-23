@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import { useState } from "react";
-import { FeaturedCard } from "./cards/FeaturedCard";
-import { Text1 } from "./typography/Text1";
-import { Flexbox } from "./wrapper/Flexbox";
+import { FeaturedCard } from "../components/cards/FeaturedCard";
+import { Text1 } from "../components/typography/Text1";
+import { Flexbox } from "../components/wrapper/Flexbox";
 
 export const Featured = () => {
   const [loading, setLoading] = useState(true);
@@ -13,10 +13,10 @@ export const Featured = () => {
   return (
     <Box maxW="md" overflow="hidden">
       <Box pl={3}>
-      <Text1>Featured</Text1>
+        <Text1>Featured</Text1>
       </Box>
       <Box width="100%">
-        <Flexbox height={'230px'}>
+        <Flexbox height={"230px"}>
           {arrayPseudo.map((item, index) => (
             <FeaturedCard loading={loading} key={index} />
           ))}

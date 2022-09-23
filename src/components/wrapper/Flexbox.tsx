@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 
-export const Flexbox = ({ children, height }) => {
+export const Flexbox = ({ children , height, ...props }) => {
   return (
     <Flex
       py={2}
@@ -22,6 +22,7 @@ export const Flexbox = ({ children, height }) => {
       overflowX={"scroll"}
       wrap={"nowrap"}
       height={`${height}`}
+      {...props}
     >
       {children}
     </Flex>

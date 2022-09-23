@@ -1,6 +1,6 @@
-import { Box, Flex, Link, Text } from "@chakra-ui/react";
-import { RecipeCard1 } from "./cards/RecipeCard1";
-import { Flexbox } from "./wrapper/Flexbox";
+import { Box,Link, Text } from "@chakra-ui/react";
+import { RecipeCard1 } from "../components/cards/RecipeCard1";
+import { Flexbox } from "../components/wrapper/Flexbox";
 
 export const PopularRecipies = () => {
   const recipiesByNutrients = [

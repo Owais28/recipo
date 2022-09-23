@@ -1,6 +1,6 @@
 import { Box, Button, Link, Skeleton, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import { Flexbox } from "./wrapper/Flexbox";
+import { Flexbox } from "../components/wrapper/Flexbox";
 
 export const Categories = () => {
 
