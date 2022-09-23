@@ -39,7 +39,7 @@ export const CuisineCard = ({ imageUrl, cuisineTitle, cuisineLink }) => {
         </SkeletonCircle>
       </Box>
       <SkeletonText noOfLines={2} isLoaded={!loading}>
-        <Text align={"center"} fontFamily={"Rubik"} fontSize={"smaller"} mt={2}>
+        <Text align={"center"} mx={'auto'} fontFamily={"Rubik"} fontSize={"smaller"} mt={2}>
           {cuisineTitle}
         </Text>
       </SkeletonText>
