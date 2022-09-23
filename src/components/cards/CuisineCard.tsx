@@ -14,8 +14,8 @@ export const CuisineCard = ({ imageUrl, cuisineTitle, cuisineLink }) => {
 
   return (
     <Box
-      flex={1}
-      flexShrink={0}
+      // flex={1}
+      // flexShrink={0}
       width={"16"}
       minW={16}
       height={"100%"}
