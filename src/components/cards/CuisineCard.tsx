@@ -1,7 +1,6 @@
 import {
   Box,
   Image,
-  Skeleton,
   SkeletonCircle,
   SkeletonText,
   Text,

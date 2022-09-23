@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Link, Text } from "@chakra-ui/react";
+import { Box, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import { CuisineCard } from "../components/cards/CuisineCard";
 import { Flexbox } from "../components/wrapper/Flexbox";
@@ -77,7 +77,7 @@ export const TopCuisinesSection = () => {
       </Text>
 
       <Box width="100%">
-        <Flexbox height={"auto"} gap={2}>
+        <Flexbox height={"auto"} gap={5}>
           {cuisineData.map((cuisine) => (
             <CuisineCard
               cuisineLink={cuisine.cuisineLink}
