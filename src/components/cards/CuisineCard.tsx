@@ -19,9 +19,10 @@ export const CuisineCard = ({ imageUrl, cuisineTitle, cuisineLink }) => {
       width={"16"}
       minW={16}
       height={"100%"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      justifyItems={"center"}
+      // alignItems={"center"}
+      // justifyContent={"center"}
+      // justifyItems={"center"}
+      position={"relative"}
     >
       <Box width={"75px"} mx={"auto"} height={"75px"}>
         <SkeletonCircle width={"100%"} height={"100%"} isLoaded={!loading}>
