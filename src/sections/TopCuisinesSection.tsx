@@ -77,7 +77,7 @@ export const TopCuisinesSection = () => {
       </Text>
 
       <Box width="100%">
-        <Flexbox height={"auto"}>
+        <Flexbox height={"auto"} gap={2}>
           {cuisineData.map((cuisine) => (
             <CuisineCard
               cuisineLink={cuisine.cuisineLink}
