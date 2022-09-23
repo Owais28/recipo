@@ -24,29 +24,24 @@ export const CuisineCard = ({ imageUrl, cuisineTitle, cuisineLink }) => {
       justifyContent={"center"}
       justifyItems={"center"}
     >
-      <Box>
-        <SkeletonCircle width={"75px"} height={"75px"} isLoaded={!loading}>
+      <Box width={"75px"} mx={"auto"} height={"75px"}>
+        <SkeletonCircle width={"100%"} height={"100%"} isLoaded={!loading}>
           <Image
             src={imageUrl}
             objectFit={"cover"}
-            height={"75px"}
-            width={"75px"}
+            height={"100%"}
+            width={"100%"}
             borderRadius={"full"}
-            mx={"auto"}
             boxShadow={"lg"}
+            mx={"auto"}
           />
         </SkeletonCircle>
-        <SkeletonText noOfLines={1} isLoaded={!loading}>
-          <Text
-            align={"center"}
-            fontFamily={"Rubik"}
-            fontSize={"smaller"}
-            mt={2}
-          >
-            {cuisineTitle}
-          </Text>
-        </SkeletonText>
       </Box>
+      <SkeletonText noOfLines={2} isLoaded={!loading}>
+        <Text align={"center"} fontFamily={"Rubik"} fontSize={"smaller"} mt={2}>
+          {cuisineTitle}
+        </Text>
+      </SkeletonText>
     </Box>
   );
 };

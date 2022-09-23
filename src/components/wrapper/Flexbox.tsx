@@ -1,11 +1,12 @@
 import { Flex } from "@chakra-ui/react";
 
-export const Flexbox = ({ children , height, ...props }) => {
+export const Flexbox = ({ children, height, ...props }) => {
   return (
     <Flex
       py={2}
       gap={3}
-      pl={3} pr={3}
+      pl={3}
+      pr={3}
       css={{
         "&::-webkit-scrollbar": {
           width: "1px",
