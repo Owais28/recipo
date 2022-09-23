@@ -23,6 +23,7 @@ export const CuisineCard = ({ imageUrl, cuisineTitle, cuisineLink }) => {
       // justifyContent={"center"}
       // justifyItems={"center"}
       position={"relative"}
+      mx={1}
     >
       <Box width={"75px"} mx={"auto"} height={"75px"}>
         <SkeletonCircle width={"100%"} height={"100%"} isLoaded={!loading}>
